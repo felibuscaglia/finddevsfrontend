@@ -1,0 +1,26 @@
+#header {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 10px 0 rgb(0 0 0 / 4%);
+}
+
+#headerIcon {
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0px 50px;
+    margin-bottom: 7px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+    #header {
+      padding: 10px 5px;
+    }
+    #headerIcon {
+        font-size: 12px;
+        margin: 0px 10px;
+    }
+  }
+  

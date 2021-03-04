@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "./static/css/main.267d51f8.chunk.css",
+    "main.js": "./static/js/main.3228ae5c.chunk.js",
+    "main.js.map": "./static/js/main.3228ae5c.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.c903ea71.js",
+    "runtime-main.js.map": "./static/js/runtime-main.c903ea71.js.map",
+    "static/js/2.9915aaa9.chunk.js": "./static/js/2.9915aaa9.chunk.js",
+    "static/js/2.9915aaa9.chunk.js.map": "./static/js/2.9915aaa9.chunk.js.map",
+    "static/js/3.5c2984f8.chunk.js": "./static/js/3.5c2984f8.chunk.js",
+    "static/js/3.5c2984f8.chunk.js.map": "./static/js/3.5c2984f8.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.267d51f8.chunk.css.map": "./static/css/main.267d51f8.chunk.css.map",
+    "static/js/2.9915aaa9.chunk.js.LICENSE.txt": "./static/js/2.9915aaa9.chunk.js.LICENSE.txt",
+    "static/media/EmptyUserProfile.7e24d68a.svg": "./static/media/EmptyUserProfile.7e24d68a.svg",
+    "static/media/FirstSVG.5c36163e.svg": "./static/media/FirstSVG.5c36163e.svg",
+    "static/media/JobApplicants.1bcd1d96.svg": "./static/media/JobApplicants.1bcd1d96.svg",
+    "static/media/Launching.7ef51cd1.svg": "./static/media/Launching.7ef51cd1.svg",
+    "static/media/Loading.626e0c2b.gif": "./static/media/Loading.626e0c2b.gif",
+    "static/media/NotFoundSearch.4892eeff.svg": "./static/media/NotFoundSearch.4892eeff.svg",
+    "static/media/PairProgramming.ee838f7e.svg": "./static/media/PairProgramming.ee838f7e.svg",
+    "static/media/Success.a207a2ff.svg": "./static/media/Success.a207a2ff.svg",
+    "static/media/Verification.e133bdb7.png": "./static/media/Verification.e133bdb7.png",
+    "static/media/emptyJob.9270a0fd.svg": "./static/media/emptyJob.9270a0fd.svg",
+    "static/media/findCandidates.3ab9d300.svg": "./static/media/findCandidates.3ab9d300.svg",
+    "static/media/hiring.fd34aea9.svg": "./static/media/hiring.fd34aea9.svg",
+    "static/media/invertedlogo.00d94a0a.png": "./static/media/invertedlogo.00d94a0a.png",
+    "static/media/logo.aff22e9b.png": "./static/media/logo.aff22e9b.png",
+    "static/media/searchCover.aac8d292.jpg": "./static/media/searchCover.aac8d292.jpg",
+    "static/media/wavyBorder1.5c7a4b7f.jpg": "./static/media/wavyBorder1.5c7a4b7f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c903ea71.js",
+    "static/js/2.9915aaa9.chunk.js",
+    "static/css/main.267d51f8.chunk.css",
+    "static/js/main.3228ae5c.chunk.js"
+  ]
+}

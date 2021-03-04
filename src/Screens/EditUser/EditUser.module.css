@@ -1,0 +1,274 @@
+#mainImage {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: -10;
+}
+
+#container {
+    height: 100%;
+    width: 100%;
+    background: #f9f9f9;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#form {
+    background-color: white;
+    border-radius: 10px;
+    width: 80%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+}
+
+#imageDiv {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 150px;
+}
+
+#socialDiv {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#skillDiv {
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown {
+    margin: 5px 0px;
+    font-family: 'Nunito';
+    font-size: 17px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid rgb(231, 231, 231);
+    width: 400px;
+}
+
+.input {
+    margin: 5px 0px;
+    font-family: 'Nunito';
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid rgb(231, 231, 231);
+    width: 300px;
+}
+
+.biggerInput {
+    margin: 5px 0px;
+    font-family: 'Nunito';
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid rgb(231, 231, 231);
+    width: 400px;
+    margin-right: 25px;
+}
+
+.textarea {
+    margin: 5px 0px;
+    font-family: 'Nunito';
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid rgb(231, 231, 231);
+    width: 400px;
+    height: 200px;
+}
+
+#btn {
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    font-family: 'Nunito';
+    font-weight: 800;
+    padding: 10px;
+    cursor: pointer;
+    width: 300px;
+    margin-top: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  #GPdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 25px 0px;
+}
+
+@media screen and (max-width: 480px) {
+    #GPdiv {
+        flex-direction: column;
+        width: 90%;
+        text-align: center;
+    }
+    #btnDiv {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    #btn {
+        margin: 0px;
+        margin-top: 25px;
+    }
+    .textarea {
+        width: 90%;
+        align-self: center;
+    }
+    .biggerInput {
+        width: 90%;
+        align-self: center;
+        margin-right: 0px;
+    }
+    .dropdown {
+        width: 90%;
+    }
+    #innerFirstDiv {
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    #socialDiv {
+        flex-direction: column;
+
+    }
+    #firstDiv {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+    }
+    #mainImage {
+        height: 100px;
+        display: none;
+    }
+    #cover {
+        display: none;
+    }
+    #container {
+        padding: 0px;
+        flex-direction: column;
+        align-items: center;
+    }
+    #form {
+        width: 100%;
+        padding: 25px 0px;
+    }
+    #imageDiv {
+        width: 100%;
+        margin-right: 0px;
+        margin-top: 25px;
+    }
+}
+
+#profilePic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+}
+
+#fileDrop {
+    display: none;
+}
+
+
+#logoLabel {
+    border: 2px solid rgb(231, 231, 231);
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 17.5px;
+    padding: 15px;
+    text-align: center;
+    margin: 25px 0px;
+    cursor: pointer;
+    width: 230px;
+}
+
+#logoLabel:hover {
+    background: black;
+    border: 2px solid black;
+    color: white;
+}
+
+#verification {
+    height: 30px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.inputDiv {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0px;
+}
+
+#skillBtn {
+    font-size: 17px;
+    font-weight: 200;
+    margin-right: 25px;
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    font-family: 'Nunito';
+    margin-bottom: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#lowEnphasis {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+  }
+
+  #btn:disabled {
+      cursor: not-allowed;
+  }
+
+  .errors {
+      font-size: 12px;
+      color: red;
+  }
+
+
+#notFound {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url(https://images.unsplash.com/photo-1535391879778-3bae11d29a24?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
+    background-size: cover;
+    background-position: center;
+}
+
+#notFoundInner {
+    background: white;
+    opacity: 90%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 70px;
+    border-radius: 10px;
+    padding: 50px
+}

@@ -1,0 +1,92 @@
+#mainDiv {
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 25px;
+    margin: 25px 0px;
+    width: 100%;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+
+#firstDiv {
+    display: flex;
+    align-items: center;
+}
+
+#imgDiv {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid rgb(231, 231, 231);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+}
+
+#name {
+    max-width: 70%;
+    word-break: break-word;
+}
+
+#btnDiv {
+    display: flex;
+    align-items: center;
+}
+
+.redirectDiv {
+    margin-right: 15px;
+    font-size: 16px;
+    font-weight: 200;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+}
+
+@media screen and (max-width: 480px) {
+    #mainDiv {
+        flex-direction: column;
+    }
+    #firstDiv {
+        margin-bottom: 25px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    #imgDiv {
+        margin-bottom: 10px;
+        margin-right: 0px;
+    }
+    #name {
+        width: 100%;
+        word-break: normal;
+    }
+    #btnDiv {
+        flex-direction: column;
+        align-items: center;
+    }
+    .redirectDiv {
+        margin: 10px 0px;
+    }
+}
+
+#mainDiv:hover {
+    -webkit-box-shadow: 0px 0px 32px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 32px -9px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 32px -9px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+#icon {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}

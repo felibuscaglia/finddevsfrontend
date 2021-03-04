@@ -1,0 +1,160 @@
+#mainTitle {
+    font-size: 4em;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    width: 50%;
+}
+
+#secondDiv {
+    display: flex;
+    background: black;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 13vh 9em;
+}
+
+#icon {
+    height: 40px;
+    margin-bottom: 25px;
+}
+
+#create {
+    font-size: 3.7em;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+#firstHalf {
+    width: 50%;
+}
+
+.txt {
+    font-size: 1.4em;
+    font-weight: 300;
+    line-height: 160%;
+}
+
+.lastTxt {
+    font-size: 1.4em;
+    font-weight: 300;
+    line-height: 160%;
+    width: 60%;
+}
+
+#secondSVG {
+    width: 500px;
+    height: 500px;
+}
+
+#lastDiv {
+    display: flex;
+    background: black;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    padding: 13vh 9em;
+    text-align: center;
+}
+
+.smallBtn {
+    border: 2px solid #23F0C7;
+    color: #23F0C7;
+    border-radius: 0.3em;
+    font-size: 1.1em;
+    padding: 0.4em 1em;
+    background: transparent;
+    margin-top: 2.5em;
+    transition: 0.3s;
+}
+
+#thirdDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13vh 9em;
+}
+
+#thirdSVG {
+    width: 550px;
+    height: 550px;
+    margin-right: 50px;
+}
+
+#lastSVG {
+    width: 600px;
+}
+
+#mainSVG {
+    width: 100%;
+    max-width: 1000px;
+}
+
+@media screen and (max-width: 480px) {
+    #mainTitle {
+        font-size: 2.5em;
+        margin-top: 100px;
+        width: 80%;
+    }
+    #secondDiv {
+        flex-direction: column;
+        padding: 50px 10px;
+        text-align: center;
+        justify-content: center;
+        
+    }
+    #icon {
+        align-self: center;
+    }
+    #create {
+        font-size: 2em;
+    }
+    #firstHalf {
+        width: 90%;
+    }
+    .txt {
+        font-size: 1em;
+    }
+    #secondSVG {
+        width: 300px;
+        height: 300px;
+    }
+    .smallBtn {
+        margin-bottom: 50px;
+    }
+    #thirdDiv {
+        flex-direction: column-reverse;
+        padding: 50px 10px;
+        text-align: center;
+        justify-content: center;
+    }
+    #thirdSVG {
+        width: 350px;
+        height: 350px;
+        margin-left: 50px;
+        margin-top: -90px;
+        margin-bottom: -60px;
+    }
+    #lastDiv {
+        padding: 50px 10px;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: -0px;
+    }
+    .lastTxt {
+        width: 100%;
+        font-size: 1em;
+    }
+    #lastSVG {
+        width: 300px;
+        height: 300px;
+    }
+  }
+
+.smallBtn:hover {
+    background: #23F0C7;
+    color: black;   
+}

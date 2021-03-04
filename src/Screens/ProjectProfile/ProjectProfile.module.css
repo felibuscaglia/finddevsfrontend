@@ -1,0 +1,167 @@
+#projectLogo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 25px;
+    border: 10px solid white;
+    align-self: 'center';
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#upvoteBtn {
+    font-family: 'Nunito';
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 17.5px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 200px;
+}
+
+#socialMediaDiv {
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    font-size: 30px;
+    align-items: center;
+    margin: 25px 0px;
+    position: absolute;
+    right: 0px;
+    top: 210px;
+}
+
+@media screen and (max-width: 480px) {
+    #projectLogo {
+        width: 100px;
+        height: 100px;
+        margin-top: 110px;
+        margin-bottom: 25px;
+    }
+    #upvoteBtn {
+        display: none;
+    }
+    #socialMediaDiv {
+        display: none;
+    }
+}
+
+#logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100px;
+  }
+
+#oneLineDescription {
+    font-size: 17px;
+    width: 60%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#aboutDiv {
+    width: 80%;
+    align-self: center;
+    color: white;
+    background: #4A154B;
+    padding: 25px;
+    border-radius: 5px;
+    margin: 50px 0px;
+}
+
+#cover {
+    height: 125px;
+    width: 100%; 
+    position: absolute; 
+    top: 96px; 
+    z-index: -10;
+}
+
+#userDiv {
+    transition: box-shadow .3s;
+    border-radius: 5px;
+    width: 275px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 25px;
+}
+
+#projectName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+}
+
+#mainUserDiv {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 90%;
+    justify-content: space-evenly;
+}
+
+#closedSpan {
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    font-size: 11px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 5px;
+}
+
+#presentDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#userDiv:hover {
+    -webkit-box-shadow: 0px 0px 32px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 32px -9px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 32px -9px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+#profilePic {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+}
+
+#mainJobDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0px;
+}
+
+#lowEnphasis {
+    font-size: 14px;
+}
+
+#contactBtn {
+    background-color: transparent;
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 5px 40px;
+}

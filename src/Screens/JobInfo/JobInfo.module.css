@@ -1,0 +1,117 @@
+#mainDiv {
+    width: 100%;
+    height: 450px;
+    color: white;
+    font-size: 40px;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px 240px;
+}
+
+#jobTitle {
+    font-weight: 800;
+    font-size: 60px;
+}
+
+#jobDescrip {
+    font-size: 17px;
+    font-weight: 300;
+    padding: 50px 240px;
+}
+
+
+#goBack {
+    font-weight: 200;
+    font-size: 18px;
+}
+
+#applyBtn {
+    background: white;
+    padding: 10px 25px;
+    font-size: 22px;
+    font-family: 'Nunito';
+    border: none;
+    border-radius: 5px;
+    font-weight: 800;
+    margin-right: 25px;
+}
+
+#applied {
+    background: white;
+    padding: 10px 25px;
+    font-size: 22px;
+    border-radius: 5px;
+    font-weight: 25px;
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+}
+
+@media screen and (max-width: 480px) {
+    #applied {
+        padding: 10px;
+        font-size: 17px;
+        margin-right: 0px;
+        margin-top: 15px;
+    }
+    #mainDiv {
+        min-height: 250px;
+        max-height: 100%;
+        padding: 0px 20px;
+        padding-top: 25px;
+    }
+    #jobTitle {
+        font-size: 40px;
+        margin-top: 10px;
+    }
+    #jobDescrip {
+        padding: 0px 20px;
+        margin: 25px 0px; 
+    }
+    #applyBtn {
+        padding: 10px;
+        font-size: 17px;
+        margin-right: 0px;
+        margin-top: 15px;
+    }
+}
+
+#projectLogoDiv {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid rgb(231, 231, 231);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+#loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100px;
+}
+
+#appliedIcon {
+    color: green;
+    margin-right: 10px;
+}
+
+#btnDiv {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+
+#logo {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}

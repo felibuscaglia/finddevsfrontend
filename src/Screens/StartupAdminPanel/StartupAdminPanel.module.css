@@ -1,0 +1,146 @@
+#secondDiv {
+    margin-left: 290px;
+    color: black;
+    width: 90%;
+    padding: 30px 48px 0 0px;
+}
+
+#projectDiv {
+    margin-bottom: 50px;
+}
+
+#invertedLogo {
+    height: 50px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+#postBtn {
+    font-weight: 700;
+    background-color: black;
+    padding: 10px 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    margin-top: 25px;
+    transition: 0.3s;
+    border: 2px solid black;
+    transition: 0.3s;
+}
+
+#empty {
+    height: 400px;
+    margin-top: 100px;
+}
+
+#emptyDiv {
+    display: flex;
+    align-items: center;
+}
+
+#addBtn2 {
+    background: black;
+    color: white;
+    padding: 10px 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 25px;
+    transition: 0.3s;
+    border: 4px solid black;
+    text-align: center;
+}
+
+#emptyTitle {
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+#link {
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+#fixedDiv {
+    position: fixed;
+    background: black;
+    height: 100%;
+    width: 240px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#logoDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+@media screen and (max-width: 480px) {
+    #link {
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+    #logoDiv {
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+    #fixedDiv {
+        width: 100%;
+        height: 100px;
+        flex-direction: column-reverse;
+        padding-bottom: 0px;
+    }
+    #secondDiv {
+        width: 100%;
+        margin-left: 0px;
+        padding: 0px 25px;
+        margin-top: 125px;
+        margin-bottom: 50px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    #invertedLogo {
+        margin: 0px;
+    }
+    #empty {
+        height: 200px;
+    }
+    #emptyDiv {
+        flex-direction: column;
+        margin-top: -25px;
+    }
+    #addBtn2 {
+        font-size: 15px;
+        padding: 5px 25px;
+    }
+    #emptyTitle {
+        font-size: 20px;
+    }
+}
+
+#loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 75px;
+}
+
+#postBtn:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+#addBtn2:hover {
+    background-color: white;
+    color: black;
+}

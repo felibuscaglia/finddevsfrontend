@@ -1,0 +1,181 @@
+#closeBtn {
+    align-self: flex-start;
+    margin-left: 10px;
+    margin-top: 10px;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#hireBtn {
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 17px;
+    font-family: 'Nunito';
+    font-weight: 800;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#mainDiv {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form {
+    background-color: white;
+    width: 75%;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 90%;
+    overflow: auto;
+}
+
+#projectDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    padding: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+#jobContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#emptyIcon {
+    height: 300px;
+    margin: 25px 0px;
+}
+
+#projectName {
+    font-weight: 300;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+#mainJobDiv {
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 4px rgb(0 0 0 / 3%);
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 25px;
+    margin: 25px 0px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#applyBtn {
+    border: none;
+  border-radius: 5px;
+  font-size: 17px;
+  font-family: 'Nunito';
+  font-weight: 800;
+  padding: 10px 60px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 480px) {
+    #applyBtn {
+        width: 100%;
+    }
+    #mainJobDiv {
+        flex-direction: column;
+    }
+    #emptyIcon {
+        height: 150px;
+    }
+    #hireBtn {
+        position: absolute;
+        top: -125px;
+        right: 20px;
+        width: 25px;
+        font-size: 15px;
+        padding: 0px;
+    }
+    #form {
+        position: fixed;
+        max-height: 100%;
+        width: 100%;
+        left: 0px;
+    }
+}
+
+#projectDiv:hover {
+    background: rgb(231, 231, 231);
+}
+
+#btn {
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 17px;
+    font-family: 'Nunito';
+    font-weight: 800;
+    padding: 10px;
+    cursor: pointer;
+    margin: 25px;
+}
+
+#btn:disabled {
+    color: white;
+}
+
+#skillDiv {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 40%;
+    align-items: center;
+    justify-content: center;
+}
+
+#skillSpan {
+    font-size: 12.5px;
+    font-weight: 800;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+#postBtn {
+    background: transparent;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Nunito';
+    font-weight: 800;
+    padding: 10px 50px;
+    cursor: pointer;
+    margin: 0px 25px;
+    border: none;
+}
+
+#accepted {
+    font-size: 100px;
+    color: green;
+    margin: 25px 0px;
+}
+
+#loading {
+    margin: 100px;
+}

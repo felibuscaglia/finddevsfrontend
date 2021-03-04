@@ -1,0 +1,242 @@
+#closeBtn {
+    align-self: flex-start;
+    margin-left: 10px;
+    margin-top: 10px;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#mainDiv {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#form {
+    background-color: white;
+    width: 60%;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form2 {
+    background-color: white;
+    width: 90%;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+}
+
+#memberForm {
+    background-color: white;
+    width: 75%;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#editBtn {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 7.5px;
+    border-radius: 5px;
+    margin: 5px 5px;
+    cursor: pointer;
+}
+
+.requirement {
+    font-size: 15px;
+    font-weight: 200;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+#profilePic {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-image: url(https://media-exp1.licdn.com/dms/image/C4E03AQETVV4DqrbYkQ/profile-displayphoto-shrink_400_400/0/1610996414116?e=1617235200&v=beta&t=wbPiJXt8Nbyz4H9ZmAoCrP5bA3GsAtRdmyhEJXSKzKo);
+    background-size: cover;
+    margin-right: 15px;
+}
+
+#applicantDiv {
+    border-bottom: 2px solid rgb(231, 231, 231);
+    font-size: 17px;
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0px;
+}
+
+#socialMediaDiv {
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    align-items: center;
+}
+
+#socialMediaDiv2 {
+    font-size: 25px;
+    width: 65%;
+    align-items: center;
+}
+
+#topApplicantDiv {
+    width: 90%;
+}
+
+.dropdownBtn {
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.redirectDiv {
+    margin-right: 15px;
+    font-size: 16px;
+    font-weight: 200;
+    border-radius: 5px;
+    padding: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    width: 125px;
+    text-align: center;
+}
+
+#empty {
+    height: 250px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+#emptyDiv {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    flex-direction: column;
+}
+
+.acceptedDiv {
+    display: flex;
+    align-items: center;
+}
+
+#accepted {
+    font-size: 100px;
+    color: green;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 480px) {
+    #accepted {
+        margin-right: 0px;
+        margin-bottom: 25px;
+    }
+    .acceptedDiv {
+        flex-direction: column;
+        width: 90%;
+    }
+    #form2 {
+        width: 90%;
+        padding: 25px 0px;
+    }
+    #form {
+        width: 90%;
+    }
+    #empty {
+        height: 200px;
+    }
+    .redirectDiv {
+        margin: 10px 0px;
+    }
+}
+
+#btn {
+    border-radius: 5px;
+    color: white;
+    font-size: 13px;
+    font-family: 'Nunito';
+    font-weight: 800;
+    padding: 10px;
+    cursor: pointer;
+    background: black;
+    margin: 5px;
+    cursor: pointer;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+#noApps {
+    font-weight: 800;
+    font-size: 20px;
+    margin: 25px 0px;
+}
+
+#memberInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 25px;
+}
+
+#changeInput {
+    font-family: 'Nunito';
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    width: 90%;
+}
+
+#accept {
+    color: green;
+    cursor: pointer;
+    font-size: 30px;
+    background: transparent;
+    border: none;
+}
+
+#changeInputDiv {
+    margin: 50px 0px;
+    border-bottom: 2px solid black;
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+#copiedAlert {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.actionBtn {
+    color: rgb(107, 6, 6);
+    cursor: pointer;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+}

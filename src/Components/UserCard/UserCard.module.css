@@ -1,0 +1,105 @@
+#userCard {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+    text-align: center;
+    margin: 25px 10px;
+    width: 250px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 650px;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+
+#link {
+    width: 100%;
+}
+
+#projectName {
+    max-width: 100%;
+    word-break: break-word;
+    text-align: center;
+}
+
+#projectCard {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+    text-align: center;
+    margin: 25px 10px;
+    width: 250px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    justify-content: space-between;
+}
+
+#profilePic {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+#bio {
+    font-size: 13px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+#skillDiv {
+    margin-top: 10px;
+}
+
+#skillSpan {
+    font-size: 12.5px;
+    font-weight: 800;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0px 5px;
+    cursor: pointer;
+}
+
+#plus {
+    font-size: 12.5px;
+    font-weight: 800;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0px 5px;
+    margin-top: 11px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+#plusSearch {
+    font-size: 12.5px;
+    font-weight: 800;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0px 5px;
+    margin-top: 8.7px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+#btn {
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 17px;
+    font-family: 'Nunito';
+    font-weight: 800;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#verification {
+    height: 20px;
+    margin-left: 5px;
+}

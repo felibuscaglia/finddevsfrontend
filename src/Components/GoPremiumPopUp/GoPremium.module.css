@@ -1,0 +1,273 @@
+#goPremiumBtn {
+    padding: 10px;
+    font-family: 'Nunito';
+    font-weight: 600;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+#postBtn {
+    font-weight: 700;
+    background-color: black;
+    padding: 10px 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    margin-top: 25px;
+    transition: 0.3s;
+    border: 2px solid black;
+    transition: 0.3s;
+}
+
+#postBtn:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.smallBtn {
+    border: 2px solid #23F0C7;
+    color: #23F0C7;
+    border-radius: 0.3em;
+    font-size: 1.1em;
+    padding: 0.4em 1em;
+    background: transparent;
+    margin-top: 2.5em;
+    transition: 0.3s;
+}
+
+.smallBtn:hover {
+    background: #23F0C7;
+    color: black;
+}
+
+#infoDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+#form {
+    background-color: #181818;
+    width: 60%;
+    height: 100%;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 150px;
+    padding: 25px;
+    color: white;
+    overflow: auto;
+}
+
+#form::-webkit-scrollbar {
+    background-color: #fff;
+    width: 16px;
+}
+
+#form::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+#form::-webkit-scrollbar-thumb {
+    background-color: #babac0;
+    border-radius: 16px;
+    border: 4px solid #fff;
+}
+
+#form::-webkit-scrollbar-button {
+    display: none;
+}
+
+#pros {
+    display: flex;
+    align-items: center;
+}
+
+#firstDiv {
+    text-align: left;
+    margin-right: 100px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#price {
+    background-color: #23F0C7;
+    padding: 10px 40px;
+    padding-right: 20px;
+    border-radius: 5px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+#paymentDiv {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#advertPay {
+    padding: 5px 20px;
+    font-size: 14px;
+    border: 2px solid #23F0C7;
+    color: #23F0C7;
+    border-radius: 5px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+#alreadyMember {
+    color: #23F0C7;
+    font-size: 17px;
+    font-weight: 800;
+    padding: 10px;
+    background-color: transparent;
+    border: 3px solid #23F0C7;
+    width: 75%;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 480px) {
+    #alreadyMember {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    #paymentDiv {
+        margin-top: 0px;
+    }
+    #advertPay {
+        font-size: 10px;
+        padding: 5px;
+        margin: 25px 0px;
+    }
+    .advert {
+        font-size: 13px;
+        margin-left: 10px;
+    }
+    #price {
+        padding: 10px;
+        font-size: 13px;
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+    }
+    #firstDiv {
+        width: 100%;
+        margin-right: 0px;
+        text-align: center;
+        font-size: 12px;
+    }
+    #pros {
+        flex-direction: column;
+    }
+    #form {
+        height: 100%;
+        width: 80%;
+        margin: 0px;
+        padding: 10px;
+    }
+    .smallBtn {
+        margin-bottom: 50px;
+    }
+    #goPremiumBtn {
+        display: flex;
+        align-self: center;
+        padding: 5px;
+        margin: 10px 0px;
+    }
+    #btn {
+        margin-top: 20px;
+    }
+}
+
+#goPremiumBtn:hover {
+    color: #f9f9f9;
+    background: black;
+}
+
+#mainDiv {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#icon {
+    height: 20px;
+    margin-right: 5px;
+}
+
+.pro {
+    margin: 10px 0px;
+}
+
+#titleGP {
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+#alreadyMember:hover {
+    background-color: #23F0C7;
+    color: black;
+}
+
+#btn {
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 17px;
+    font-family: 'Nunito';
+    font-weight: 800;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #23F0C7;
+    border: 3px solid #23F0C7;
+    width: 50%;
+    transition: 0.3s;
+}
+
+#btn:hover {
+    background-color: transparent;
+    color: #23F0C7;
+}
+
+#payPalDiv {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#closeBtn {
+    align-self: flex-start;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+#paypal {
+    align-self: flex-start;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    margin-bottom: 200px;
+}

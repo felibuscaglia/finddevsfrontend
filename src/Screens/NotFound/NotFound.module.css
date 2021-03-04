@@ -1,0 +1,27 @@
+#notFound {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    background-image: url(https://images.unsplash.com/photo-1573767291321-c0af2eaf5266?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1062&q=80);
+}
+
+#text {
+    background: white;
+    opacity: 90%;
+    color: black;
+    padding: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+#link {
+    color: black;
+    font-weight: 700;
+    display: inline;
+}
