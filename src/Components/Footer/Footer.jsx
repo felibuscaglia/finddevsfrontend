@@ -5,9 +5,10 @@ import { Link } from 'react-router-dom';
 function Footer() {
     return (
         <div id={style.footer}>
-            <div>
+            <div className='displayFlexColumn'>
                 <h1 className='font800'>FindDevs</h1>
                 <span className='font200'>© 2021 All rights reserved.</span>
+                <span style={{ marginTop: "10px" }} className='font600'>contact@finddevs.io</span>
             </div>
             <div className='displayFlex' id={style.lastDiv}>
                 <Link className={style.links} to='/jobs'>

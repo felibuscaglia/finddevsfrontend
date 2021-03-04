@@ -21,7 +21,7 @@ function Homepage() {
             <div id={style.secondDiv}>
                 <div id={style.firstHalf}>
                     <div className='displayFlexColumn' id='alignItemsFS'>
-                        <img alt="Decoration" src='https://pics.freeicons.io/uploads/icons/png/1643084561599979347-512.png' id={style.icon} />
+                        <img rel="preload" alt="" src='https://pics.freeicons.io/uploads/icons/png/1643084561599979347-512.png' id={style.icon} />
                         <h1 id={style.create}>Create the next big thing.</h1>
                     </div>
                     <p className={style.txt}>
