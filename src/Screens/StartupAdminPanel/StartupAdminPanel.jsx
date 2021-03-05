@@ -10,10 +10,12 @@ import jwt from 'jsonwebtoken';
 import { setUserInfo } from '../../Actions/index';
 import Loading from '../../Media/Loading.gif';
 import GoPremium from '../../Components/GoPremiumPopUp/GoPremium';
+import { Alert } from 'reactstrap';
 
 function StartupAdminPanel({ user, limitOfPosts, setUserInfo }) {
     const [projects, setProjects] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [alert, setAlert] = useState(false);
 
     async function asyncUseEffect(username) {
         await (setUserInfo(username));
@@ -37,6 +39,13 @@ function StartupAdminPanel({ user, limitOfPosts, setUserInfo }) {
             .catch(err => console.log(err))
     }, [user])
 
+    function leaveProject () {
+        setLoading (true);
+        axios.delete (`/users/${user.id}/${alert.id}`)
+            .then (res => window.location.reload ())
+            .catch (err => console.log (err))
+    }
+
     if (loading) {
         return <img alt="Loading GIF" src={Loading} id={style.loading} />
     }
@@ -52,7 +61,7 @@ function StartupAdminPanel({ user, limitOfPosts, setUserInfo }) {
             <div id={style.secondDiv}>
                 <div id={style.projectDiv}>
                     {projects.length > 0 && <h1 className='font800'>Your projects</h1>}
-                    {projects.length > 0 ? projects.map(project => project.userXprojects.endDate !== null ? null : project.userXprojects.isFounder ? <ProjectCard key={project.id} project={project} isFounder={true} /> : <ProjectCard key={project.id} project={project} isFounder={false} />) :
+                    {projects.length > 0 ? projects.map(project => project.userXprojects.endDate !== null ? null : project.userXprojects.isFounder ? <ProjectCard key={project.id} project={project} isFounder={true} /> : <ProjectCard setAlert={setAlert} key={project.id} project={project} isFounder={false} />) :
                         <div id={style.emptyDiv}>
                             <img alt="No jobs posted" src={Empty} id={style.empty} />
                             <div>
@@ -62,6 +71,7 @@ function StartupAdminPanel({ user, limitOfPosts, setUserInfo }) {
                         </div>}
                 </div>
                 {projects.length > 0 && !limitOfPosts ? <Link to='/project/post'><span id={style.postBtn}>Post a project</span></Link> : <GoPremium isAdminPanel={true} />}
+                {alert && <Alert id={style.alert} color="danger">Are you sure you want to leave {alert.name}? <div className='displayFlex' id='alignItemsCenter' onClick={() => setAlert (false)} ><i id={style.pick} class="fas fa-times-circle"></i></div> <div onClick={ leaveProject } className='displayFlex' id='alignItemsCenter'><i id={style.pick} class="fas fa-check-circle"></i></div></Alert>}
             </div>
         </div>
     )

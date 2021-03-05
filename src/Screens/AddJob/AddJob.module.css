@@ -94,7 +94,14 @@
     transform: translate(-50%, -50%);
 }
 
+#alert {
+    width: 50%;
+}
+
 @media screen and (max-width: 480px) {
+    #alert {
+        width: 100%;
+    }
     #link {
         margin-bottom: 0px;
     }
@@ -157,10 +164,6 @@
     #logoDiv {
         padding: 0px;
     }
-}
-
-#alert {
-    width: 50%;
 }
 
 .title {

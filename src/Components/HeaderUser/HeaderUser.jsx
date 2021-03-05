@@ -73,7 +73,6 @@ function HeaderUser(props) {
                         <div id={style.dropdownDiv}>
                             <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
                                 <i id='popUpIcn' className="fas fa-bell"></i>
-
                                 {props.notifications && props.notifications.length > 0 && <i id={style.alert} className="fas fa-circle"></i>}
                             </Button>
                             <Menu

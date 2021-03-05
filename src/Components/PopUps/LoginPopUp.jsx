@@ -3,6 +3,7 @@ import Popup from 'reactjs-popup';
 import style from './PopUpStyle.module.css';
 import axios from 'axios';
 import jwt from 'jsonwebtoken';
+import { Alert } from 'reactstrap';
 
 function LoginPopUp({ isRegister }) {
 
@@ -54,9 +55,9 @@ function LoginPopUp({ isRegister }) {
                         <button onClick={handleSubmit} id={style.createBtn}>Sign in.</button>
                     </div>
                     {error &&
-                        <div id={style.alert} class="alert alert-danger" role="alert">
+                        <Alert id={style.alert} color="danger">
                             Username or password not valid.
-                        </div>
+                        </Alert>
                     }
                 </div>
             )}

@@ -8,8 +8,9 @@ import Loading from '../../Media/Loading.gif';
 import jwt from 'jsonwebtoken';
 import { setUserInfo } from '../../Actions/index';
 import { Link } from 'react-router-dom';
+import { Alert } from 'reactstrap';
 
-function AddJob({ projectID, skills, setUserInfo, user }) {
+function AddJob({ projectID, skills, setUserInfo }) {
 
     const [project, setProject] = useState({});
     const [selectedSkills, setSelectedSkills] = useState([]);
@@ -76,7 +77,10 @@ function AddJob({ projectID, skills, setUserInfo, user }) {
 
         axios.post(`/jobs/${project.id}`, { jobInfo: input, skills: justIDs })
             .then(res => window.location.replace(`/project/jobPanel/${project.id}`))
-            .catch(err => setError('Something failed—we are sorry!'))
+            .catch(err => {
+                setError('Something failed—we are sorry!');
+                setLoading (false);
+            })
     }
 
     return (
@@ -139,9 +143,9 @@ function AddJob({ projectID, skills, setUserInfo, user }) {
                         <div>
                             <button onClick={handleSubmit} id={style.uploadBtn}>Post job</button>
                             {error &&
-                                <div id={style.alert} class="alert alert-danger" role="alert">
+                                <Alert id={style.alert} color="danger">
                                     {error}
-                                </div>
+                                </Alert>
                             }
                         </div>
                     </div> :

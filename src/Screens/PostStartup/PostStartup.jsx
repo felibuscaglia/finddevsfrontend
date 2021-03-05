@@ -9,6 +9,7 @@ import { getBrightness } from '../../utils';
 import Loading from '../../Media/Loading.gif';
 import { setUserInfo } from '../../Actions/index';
 import jwt from 'jsonwebtoken';
+import { Alert } from 'reactstrap';
 
 function PostStartup({ user, limitOfPosts, setUserInfo }) {
     const [input, setInput] = useState({ mainColor: '#000' });
@@ -63,6 +64,11 @@ function PostStartup({ user, limitOfPosts, setUserInfo }) {
 
     function handleSubmit() {
         setLoading(true);
+        if (input.name === '') {
+            setError(true);
+            setLoading(false);
+            return;
+        }
         if (!file) input.logo = 'https://i.ibb.co/m82SNJT/profile-pic-startup-sin-marco.png';
         input.isPremium = user.isPremium;
         input.ownerId = user.id;
@@ -81,7 +87,10 @@ function PostStartup({ user, limitOfPosts, setUserInfo }) {
                 } else window.location.replace('/admin/panel')
             })
             .then(res => window.location.replace('/admin/panel'))
-            .catch(err => setError(true))
+            .catch(err => {
+                setError(true);
+                setLoading(false);
+            })
     }
 
     function check(e) {
@@ -165,7 +174,7 @@ function PostStartup({ user, limitOfPosts, setUserInfo }) {
                     <span className='font600' >Describe your project *</span>
                     <textarea onChange={(e) => handleInputChange(e)} name='description' maxLength="2000" className={style.textarea} />
                 </div>
-                {error && <div id={style.alert} class="alert alert-danger" role="alert">Please complete all the necessary fields.</div>}
+                {error && <Alert id={style.alert} color="danger">Please complete all the necessary fields.</Alert>}
                 {loading && !error ? <img alt="Loading GIF" id={style.loading} src={Loading} /> : <button disabled={btnDisabled} onClick={handleSubmit} id={style.uploadBtn}>Post your project!</button>}
             </div>
         </div>

@@ -10,6 +10,7 @@ import UserCard from './UserSettingsCard';
 import Confirmation from '../../Components/PopUps/Confirmation';
 import { setUserInfo } from '../../Actions/index';
 import jwt from 'jsonwebtoken';
+import { Alert } from 'reactstrap';
 
 function ProjectSettings({ user, projectID, setUserInfo }) {
 
@@ -18,9 +19,9 @@ function ProjectSettings({ user, projectID, setUserInfo }) {
     const [file, setFile] = useState(null);
     const [error, setError] = useState(false);
     const [loading, setLoading] = useState(false);
-    const [firstCheck, setFirstCheck] = useState (true);
-    const [inputErrors, setInputErrors] = useState ({});
-    const [btnDisabled, setDisabled] = useState (false);
+    const [firstCheck, setFirstCheck] = useState(true);
+    const [inputErrors, setInputErrors] = useState({});
+    const [btnDisabled, setDisabled] = useState(false);
 
     async function asyncUseEffect(username) {
         await (setUserInfo(username));
@@ -35,12 +36,12 @@ function ProjectSettings({ user, projectID, setUserInfo }) {
         }
         axios.get(`/projects/${projectID}`)
             .then(projectData => {
-                const userFound = projectData.data.users.find (member => member.id === user.id);
-                if (projectData.data.isDeleted || !userFound || !userFound.userXprojects.isFounder) window.location.replace ('/error'); 
+                const userFound = projectData.data.users.find(member => member.id === user.id);
+                if (projectData.data.isDeleted || !userFound || !userFound.userXprojects.isFounder) window.location.replace('/error');
                 setPreview(projectData.data.logo)
                 setInput(projectData.data);
-                setTimeout (() => {
-                    setFirstCheck (false);
+                setTimeout(() => {
+                    setFirstCheck(false);
                 }, 2000)
             })
             .catch(err => console.log(err))
@@ -72,7 +73,12 @@ function ProjectSettings({ user, projectID, setUserInfo }) {
 
     function handleSubmit() {
         setLoading(true);
-        input.brightness = getBrightness (input.mainColor);
+        if (input.name === '') {
+            setError(true);
+            setLoading(false);
+            return;
+        }
+        input.brightness = getBrightness(input.mainColor);
         axios.patch(`/projects/${projectID}`, input)
             .then(res => {
                 if (file) {
@@ -84,10 +90,13 @@ function ProjectSettings({ user, projectID, setUserInfo }) {
                         }
                     };
                     return axios.post(`/projects/${projectID}/logo`, newForm, config);
-                } else return window.location.replace ('/admin/panel')
+                } else return window.location.replace('/admin/panel')
             })
             .then(res => window.location.replace('/admin/panel'))
-            .catch(err => setError(true))
+            .catch(err => {
+                setError(true);
+                setLoading(false);
+            })
     }
 
     function check(e) {
@@ -169,7 +178,7 @@ function ProjectSettings({ user, projectID, setUserInfo }) {
                 <div>
                     {input.users && input.users.map(user => !user.userXprojects.isFounder ? <UserCard key={user.id} user={user} projectID={input.id} /> : null)}
                 </div>
-                {error && <div id={style.alert} class="alert alert-danger" role="alert">Please complete all the necessary fields.</div>}
+                {error && <Alert id={style.alert} color="danger">Please complete all the necessary fields.</Alert>}
                 {loading && !error ? <img alt="Loading GIF" id={style.loading} src={Loading} /> :
                     <div id={style.btnDiv}>
                         <button disabled={btnDisabled} onClick={handleSubmit} id={style.uploadBtn}>Update your project</button>
@@ -186,7 +195,7 @@ function mapStateToProps(state) {
     }
 }
 
-function mapDispatchToProps (dispatch) {
+function mapDispatchToProps(dispatch) {
     return {
         setUserInfo: username => dispatch(setUserInfo(username))
     }

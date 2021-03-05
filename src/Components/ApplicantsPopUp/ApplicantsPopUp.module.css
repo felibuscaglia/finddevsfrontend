@@ -42,16 +42,6 @@
     padding: 100px;
 }
 
-#memberForm {
-    background-color: white;
-    width: 75%;
-    text-align: center;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 #editBtn {
     font-size: 14px;
     font-weight: 300;
@@ -122,7 +112,7 @@
     padding: 10px;
     transition: 0.3s;
     cursor: pointer;
-    width: 125px;
+    width: 150px;
     text-align: center;
 }
 
@@ -150,7 +140,65 @@
     margin-right: 10px;
 }
 
+#memberForm {
+    background-color: white;
+    width: 75%;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+
+#btn {
+    border-radius: 5px;
+    color: white;
+    font-size: 13px;
+    font-family: 'Nunito';
+    font-weight: 800;
+    padding: 10px;
+    cursor: pointer;
+    background: black;
+    margin: 5px;
+    cursor: pointer;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+#memberInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 25px;
+}
+
 @media screen and (max-width: 480px) {
+    #memberInfo {
+        margin-left: 0px;
+    }
+    #btn {
+        font-size: 10px;
+        padding: 8px;
+    }
+    #topApplicantDiv {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #socialMediaDiv2 {
+        font-size: 20px;
+        width: 100%;
+        display: flex;
+        margin: 10px 0px;
+    }
+    #memberForm {
+        width: 95%;
+    }
+    #applicantDiv {
+        flex-direction: column;
+    }
     #accepted {
         margin-right: 0px;
         margin-bottom: 25px;
@@ -174,32 +222,10 @@
     }
 }
 
-#btn {
-    border-radius: 5px;
-    color: white;
-    font-size: 13px;
-    font-family: 'Nunito';
-    font-weight: 800;
-    padding: 10px;
-    cursor: pointer;
-    background: black;
-    margin: 5px;
-    cursor: pointer;
-    border: 1px solid white;
-    cursor: pointer;
-}
-
 #noApps {
     font-weight: 800;
     font-size: 20px;
     margin: 25px 0px;
-}
-
-#memberInfo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 25px;
 }
 
 #changeInput {

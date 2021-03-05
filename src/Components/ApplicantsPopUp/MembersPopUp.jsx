@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import ChangeRole from './ChangeRole';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { Alert } from 'reactstrap';
 
 function MembersPopUp({ projectID, userInfo, brightness, isFounder }) {
 
@@ -29,7 +30,7 @@ function MembersPopUp({ projectID, userInfo, brightness, isFounder }) {
 
     function fireUser(userID) {
         axios.delete(`/projects/${projectID}/${userID}/fire`)
-            .then(res => window.location.reload ())
+            .then(res => window.location.reload())
             .catch(err => console.log(err))
     }
 
@@ -47,7 +48,7 @@ function MembersPopUp({ projectID, userInfo, brightness, isFounder }) {
                             <h1 className='font200'><span className='font800'>{project.name}</span> members</h1>
                             <div id={style.topApplicantDiv}>
                                 {project.users && project.users.map(user =>
-                                    user.userXprojects.endDate === null && 
+                                    user.userXprojects.endDate === null &&
                                     <div key={user.id} id={style.applicantDiv}>
                                         <div className='displayFlex' id='alignItemsCenter'>
                                             <div id={style.profilePic}></div>
@@ -68,12 +69,13 @@ function MembersPopUp({ projectID, userInfo, brightness, isFounder }) {
                             </div>
                         </div> :
                         <ChangeRole userData={changeRole} setChangeRole={setChangeRole} projectName={project.name} />}
-                    {copied && <div id={style.copiedAlert} class="alert alert-success" role="alert">Copied user's contact email to clipboard!</div>}
-                    {fire && <div id={style.copiedAlert} class="alert alert-danger" role="alert">
-                        Are you sure you want to fire {fire.username}?
-                        <button className={style.actionBtn} onClick={() => fireUser(fire.id)}><i class="far fa-check-circle"></i></button>
-                        <button onClick={() => setFire(false)} className={style.actionBtn}><i class="far fa-times-circle"></i></button>
-                    </div>}
+                    {copied && <Alert id={style.copiedAlert} color="success">Copied user's contact email to clipboard!</Alert>}
+                    {fire &&
+                        <Alert id={style.copiedAlert} color="danger">
+                            Are you sure you want to fire {fire.username}?
+                            <button className={style.actionBtn} onClick={() => fireUser(fire.id)}><i class="far fa-check-circle"></i></button>
+                            <button onClick={() => setFire(false)} className={style.actionBtn}><i class="far fa-times-circle"></i></button>
+                        </Alert>}
                 </div>
             )}
         </Popup>

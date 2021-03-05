@@ -11,6 +11,7 @@ import axios from 'axios';
 import { getBrightness } from '../../utils';
 import jwt from 'jsonwebtoken';
 import { setUserInfo } from '../../Actions/index';
+import { Alert } from 'reactstrap';
 
 function EditUser({ user, skills, setUserInfo }) {
 
@@ -78,10 +79,10 @@ function EditUser({ user, skills, setUserInfo }) {
         setSelectedSkills(selectedSkills.filter(skill => skill.label !== e.target.name))
     }
 
-    function handleInputChange (e) {
+    function handleInputChange(e) {
         var copyOfErrors = errors;
         var noErrors = true;
-        if (e.hex) return setInput ({ ...input, color: e.hex });
+        if (e.hex) return setInput({ ...input, color: e.hex });
         if (e.target.name === 'email') {
             if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(e.target.value)) copyOfErrors = { ...copyOfErrors, email: true };
             else copyOfErrors = { ...copyOfErrors, email: false };
@@ -91,14 +92,14 @@ function EditUser({ user, skills, setUserInfo }) {
             else copyOfErrors = { ...errors, [e.target.name]: false };
         }
 
-        for (const key in copyOfErrors) if (copyOfErrors [key]) noErrors = false;
+        for (const key in copyOfErrors) if (copyOfErrors[key]) noErrors = false;
 
-        if (noErrors) setDisabled (false);
-        else setDisabled (true);
+        if (noErrors) setDisabled(false);
+        else setDisabled(true);
 
-        setErrors (copyOfErrors);
+        setErrors(copyOfErrors);
 
-        setInput ({ ...input, [e.target.name]: e.target.value })
+        setInput({ ...input, [e.target.name]: e.target.value })
     }
 
     function handleSubmit() {
@@ -122,7 +123,10 @@ function EditUser({ user, skills, setUserInfo }) {
                 }
             })
             .then(res => window.location.replace(`/user/${user.username}`))
-            .catch(err => setError(true))
+            .catch(err => {
+                setError(true);
+                setLoading(false);
+            })
     }
 
     return (
@@ -207,9 +211,9 @@ function EditUser({ user, skills, setUserInfo }) {
                         <button onClick={() => window.location.replace(`/user/${user.username}`)} style={{ background: 'black', color: 'white' }} id={style.btn}>Discard changes</button>
                         <button onClick={handleSubmit} disabled={btnDisabled} style={{ background: btnDisabled ? 'gray' : user.color, color: user.brightness === 'bright' ? '#fff' : '#000' }} id={style.btn}>Save changes</button>
                     </div>
-                    {error && <div id='giveMargin' style={{ fontWeight: 800 }} class="alert alert-danger" role="alert">
+                    {error && <Alert id='giveMargin' className='font800' color="danger">
                         Something failed — we are sorry!
-                    </div>}
+                    </Alert>}
                 </div>}
                 {loading &&
                     <div id={style.form}>

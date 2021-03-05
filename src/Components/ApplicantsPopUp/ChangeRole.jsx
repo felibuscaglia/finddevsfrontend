@@ -8,6 +8,7 @@ function ChangeRole({ userData, setChangeRole, projectName }) {
 
     function changeRole () {
         const data = userData.userXprojects;
+        if (role === '') return;
         axios.put (`/projects/${userData.userXprojects.userId}/${userData.userXprojects.projectId}/role`, { role,  userXprojects: data })
             .then (res => window.location.reload ())
             .catch (err => console.log (err))

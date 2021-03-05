@@ -15,6 +15,20 @@
     margin-bottom: 10px;
 }
 
+#alert {
+    position: absolute;
+    bottom: 25px;
+    left: 45%;
+    display: flex;
+    align-items: center;
+}
+
+#pick {
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0px 5px;
+}
+
 #postBtn {
     font-weight: 700;
     background-color: black;
@@ -82,6 +96,13 @@
 }
 
 @media screen and (max-width: 480px) {
+    #alert {
+        position: fixed;
+        justify-self: center;
+        left: 0%;
+        align-self: center;
+        bottom: 10px;
+    }
     #link {
         margin-top: 10px;
         margin-bottom: 0px;
