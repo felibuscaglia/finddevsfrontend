@@ -5,6 +5,8 @@ import Verified from '../../Media/Verification.png';
 import axios from 'axios';
 import { PayPalButton } from 'react-paypal-button-v2';
 import { connect } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle, faTimes } from '@fortawesome/free-solid-svg-icons';
 const { REACT_APP_PAYPAL_CLIENTID } = process.env;
 
 function GoPremium({ isAdminPanel, isHomepage, userInfo }) {
@@ -42,7 +44,7 @@ function GoPremium({ isAdminPanel, isHomepage, userInfo }) {
                             <img alt="Loading GIF" src='https://flevix.com/wp-content/uploads/2019/07/Bar-Preloader-1.gif' /> :
                             checkout ?
                                 <div id={style.payPalDiv}>
-                                    <button id={style.paypal} onClick={() => closePopUp(close)}><i class="fas fa-times"></i></button>
+                                    <button id={style.paypal} onClick={() => closePopUp(close)}><FontAwesomeIcon icon={faTimes} /></button>
                                     <PayPalButton
                                         amount={11.99}
                                         currency={'USD'}
@@ -54,7 +56,7 @@ function GoPremium({ isAdminPanel, isHomepage, userInfo }) {
                                     />
                                 </div> :
                                 <div id={style.infoDiv}>
-                                    <button id={style.closeBtn} onClick={() => closePopUp(close)}><i class="fas fa-times"></i></button>
+                                    <button id={style.closeBtn} onClick={() => closePopUp(close)}><FontAwesomeIcon icon={faTimes} /></button>
                                     <div className='displayFlex' id='alignItemsCenter'>
                                         <h1 id={style.titleGP}>Get verified and become a premium member!</h1>
                                     </div>
@@ -76,7 +78,7 @@ function GoPremium({ isAdminPanel, isHomepage, userInfo }) {
                                         </div>
                                     </div>
                                     <div id={style.paymentDiv}>
-                                        {isHomepage && !userInfo.username ? null : userInfo.isPremium ? <span id={style.alreadyMember}><i class="fas fa-check-circle"></i> You are already a premium member of FindDevs!</span> : <button onClick={() => setCheckout(true)} id={style.btn}>Go premium</button>}
+                                        {isHomepage && !userInfo.username ? null : userInfo.isPremium ? <span id={style.alreadyMember}><FontAwesomeIcon icon={faCheckCircle} /> You are already a premium member of FindDevs!</span> : <button onClick={() => setCheckout(true)} id={style.btn}>Go premium</button>}
                                     </div>
                                 </div>}
                     </div>

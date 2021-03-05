@@ -6,6 +6,8 @@ import { Hint } from 'react-autocomplete-hint';
 import JobCard from './JobCard';
 import Loading from '../../Media/Loading.gif';
 import wavyImage from '../../Media/wavyBorder1.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 function JobListings({ jobs, skills, skillSelection, filteredJobs, filterJob, removeJobFilter }) {
 
@@ -28,7 +30,7 @@ function JobListings({ jobs, skills, skillSelection, filteredJobs, filterJob, re
         <div className='displayFlexColumn' id='alignItemsCenter'>
             <div style={{ backgroundImage: `url(${wavyImage})`}} id={style.mainImage}>
                 <div id={style.searchDiv}>
-                    <i class="fas fa-search"></i>
+                    <FontAwesomeIcon icon={faSearch} />
                     <Hint options={skills}>
                         <input onKeyDown={(e) => addSkill(e)} type='text' placeholder='Search for job skills' id={style.searchInput} />
                     </Hint>
@@ -36,7 +38,7 @@ function JobListings({ jobs, skills, skillSelection, filteredJobs, filterJob, re
             </div>
             <div style={{ display: skillSelection.length > 0 ? 'block' : 'none' }} id={style.filteredDiv}>
                 {skillSelection.map(filtered =>
-                    <span key={filtered.id} onClick={() => removeJobFilter(filtered)} style={{ background: filtered.strongColor, color: filtered.softColor }} id={style.skillSpan}>{filtered.label} <i class="fas fa-times-circle"></i></span>
+                    <span key={filtered.id} onClick={() => removeJobFilter(filtered)} style={{ background: filtered.strongColor, color: filtered.softColor }} id={style.skillSpan}>{filtered.label} <FontAwesomeIcon icon={faTimesCircle} /></span>
                 )}
             </div>
             {loading ?

@@ -4,6 +4,9 @@ import style from './PopUpStyle.module.css';
 import axios from 'axios';
 import jwt from 'jsonwebtoken';
 import { Alert } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLock, faTimes, faUser } from '@fortawesome/free-solid-svg-icons';
+
 
 function LoginPopUp({ isRegister }) {
 
@@ -40,15 +43,15 @@ function LoginPopUp({ isRegister }) {
             {close => (
                 <div id={style.mainDiv}>
                     <div id={style.form}>
-                        <button id={style.closeBtn} onClick={() => closePopUp(close)}><i class="fas fa-times"></i></button>
+                        <button id={style.closeBtn} onClick={() => closePopUp(close)}><FontAwesomeIcon icon={faTimes} /></button>
                         <h1 id={style.title}>Login</h1>
                         <span style={{ width: '85%' }}>Sign into your account here.</span>
                         <div className={error ? style.inputcontainerError : style.inputcontainer}>
-                            <i class="far fa-user"></i>
+                            <FontAwesomeIcon icon={faUser} />
                             <input name='username' onChange={(e) => handleInputChange(e)} className={style.input} placeholder='Your username'></input>
                         </div>
                         <div className={error ? style.inputcontainerError : style.inputcontainer} tabindex="-1">
-                            <i class="fas fa-lock"></i>
+                            <FontAwesomeIcon icon={faLock} />
                             <input style={{ marginLeft: '10px' }} name='password' type={showPass ? 'text' : 'password'} onChange={(e) => handleInputChange(e)} className={style.input} placeholder='Password'></input>
                             <button id={style.showPassBtn} onClick={() => setShowPass(!showPass)}>{showPass ? 'Hide' : 'Show'}</button>
                         </div>

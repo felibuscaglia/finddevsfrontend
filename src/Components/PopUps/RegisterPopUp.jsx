@@ -4,6 +4,8 @@ import Popup from 'reactjs-popup';
 import axios from 'axios';
 import randomColor from 'randomcolor';
 import { getBrightness } from '../../utils';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 function RegisterPopUp({ isHomepage, isMain, isMainHomepage, isJobProfile }) {
 
@@ -67,7 +69,7 @@ function RegisterPopUp({ isHomepage, isMain, isMainHomepage, isJobProfile }) {
                 <div>
                     <div id={style.mainDiv}>
                         <div id={style.form}>
-                            <button id={style.closeBtn} onClick={() => closePopUp(close)}><i class="fas fa-times"></i></button>
+                            <button id={style.closeBtn} onClick={() => closePopUp(close)}><FontAwesomeIcon icon={faTimes} /></button>
                             <h1 id={style.title}>Sign Up</h1>
                             <span style={{ width: '85%' }}>Join <span className='font800'>FindDevs</span> today and get the boost your startup needs.</span>
                             <div className={errors['username'] ? style.inputcontainerError : style.inputcontainer}>

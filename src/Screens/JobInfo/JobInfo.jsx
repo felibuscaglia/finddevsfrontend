@@ -7,6 +7,8 @@ import Loading from '../../Media/Loading.gif';
 import Register from '../../Components/PopUps/RegisterPopUp';
 import jwt from 'jsonwebtoken';
 import { setUserInfo } from '../../Actions/index'; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
 function JobInfo({ jobID, user, setUserInfo }) {
     const [job, setJob] = useState({});
@@ -51,7 +53,7 @@ function JobInfo({ jobID, user, setUserInfo }) {
                 <div>
                     {job.project &&
                         <div style={{ background: job.project && job.project.mainColor, color: job.project.brightness === 'bright' ? '#fff' : '#000' }} id={style.mainDiv}>
-                            <Link style={{ color: job.project.brightness === 'bright' ? '#fff' : '#000' }} to='/jobs'><span id={style.goBack}><i style={{ marginRight: '10px' }} class="fas fa-arrow-left"></i>More jobs</span></Link>
+                            <Link style={{ color: job.project.brightness === 'bright' ? '#fff' : '#000' }} to='/jobs'><span id={style.goBack}><FontAwesomeIcon style={{ marginRight: '10px' }} icon={faArrowLeft} />More jobs</span></Link>
                             <Link className='links' to={`/project/profile/${job.project.id}`}>
                                 <div className='displayFlex' id='alignItemsCenter'>
                                     <div id={style.projectLogoDiv}>
@@ -63,9 +65,9 @@ function JobInfo({ jobID, user, setUserInfo }) {
                             <h1 id={style.jobTitle}>{job.title}</h1>
                             <div id={style.btnDiv}>
                                 {notUser ? <Register isJobProfile={true} /> :
-                                    isMember ? <span style={{ color: job.project.brightness === 'bright' ? '#fff' : '#000', background: job.project.brightness === 'bright' ? '#000' : '#fff' }} id={style.applied}><i id={style.appliedIcon} class="fas fa-check-circle"></i> You are already part of {job.project.name}.</span> :
+                                    isMember ? <span style={{ color: job.project.brightness === 'bright' ? '#fff' : '#000', background: job.project.brightness === 'bright' ? '#000' : '#fff' }} id={style.applied}><FontAwesomeIcon id={style.appliedIcon} icon={faCheckCircle} /> You are already part of {job.project.name}.</span> :
                                         applied ?
-                                            <span style={{ color: job.project.brightness === 'bright' ? '#fff' : '#000', background: job.project.brightness === 'bright' ? '#000' : '#fff' }} id={style.applied}><i id={style.appliedIcon} class="fas fa-check-circle"></i> You have applied to this job</span> :
+                                            <span style={{ color: job.project.brightness === 'bright' ? '#fff' : '#000', background: job.project.brightness === 'bright' ? '#000' : '#fff' }} id={style.applied}><FontAwesomeIcon id={style.appliedIcon} icon={faCheckCircle} /> You have applied to this job</span> :
                                             <button onClick={applyToJob} style={{ color: job.project.brightness === 'bright' ? '#fff' : '#000', border: job.project.brightness === 'bright' ? '4px solid #fff' : '4px solid #000' }} id={style.applyBtn}>Apply to this job</button>
                                 }
                                 {job.Applicants.length >= 15 && !applied && <span className='font200'>🔥 This job has received many applications</span>}

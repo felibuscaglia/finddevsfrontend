@@ -3,6 +3,8 @@ import style from './HirePopUp.module.css';
 import axios from 'axios';
 import Loading from '../../Media/Loading.gif';
 import Invited from '../ApplicantsPopUp/Accepted';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
 function JobCard({ job, project, applicantUsername, user, close, alreadyInvited }) {
 
@@ -43,7 +45,7 @@ function JobCard({ job, project, applicantUsername, user, close, alreadyInvited 
                     <div key={skill.id} style={{ border: project.project.brightness === 'bright' ? '2px solid #fff' : '2px solid #000' }} id={style.skillSpan}>{skill.label}</div>
                 )}
             </div>
-            {alreadyInvited ? <span style={{ color: project.project.brightness === 'bright' ? '#fff' : '#000', border: project.project.brightness === 'bright' ? '3px solid white' : '3px solid black' }} id={style.applyBtn} ><i class="fas fa-check-circle"></i></span> : <button onClick={() => inviteToProject(job.title, job.id)} style={{ color: project.project.brightness === 'bright' ? '#fff' : '#000', border: project.project.brightness === 'bright' ? '3px solid white' : '3px solid black' }} id={style.applyBtn}>Invite</button>}
+            {alreadyInvited ? <span style={{ color: project.project.brightness === 'bright' ? '#fff' : '#000', border: project.project.brightness === 'bright' ? '3px solid white' : '3px solid black' }} id={style.applyBtn} ><FontAwesomeIcon icon={faCheckCircle} /></span> : <button onClick={() => inviteToProject(job.title, job.id)} style={{ color: project.project.brightness === 'bright' ? '#fff' : '#000', border: project.project.brightness === 'bright' ? '3px solid white' : '3px solid black' }} id={style.applyBtn}>Invite</button>}
         </div>
     )
 }

@@ -9,6 +9,8 @@ import jwt from 'jsonwebtoken';
 import { setUserInfo } from '../../Actions/index';
 import { Link } from 'react-router-dom';
 import { Alert } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDoorOpen } from '@fortawesome/free-solid-svg-icons';
 
 function AddJob({ projectID, skills, setUserInfo }) {
 
@@ -89,7 +91,7 @@ function AddJob({ projectID, skills, setUserInfo }) {
                 <div id={style.logoDiv}>
                     <Link to={`/project/profile/${projectID}`}><img alt="Project logo" src={project.logo} id={style.logo} /></Link>
                 </div>
-                <Link id={style.link} to={`/project/jobPanel/${projectID}`}><span className='font200'><i class="fas fa-door-open"></i> Go back</span></Link>
+                <Link id={style.link} to={`/project/jobPanel/${projectID}`}><span className='font200'><FontAwesomeIcon icon={faDoorOpen} /> Go back</span></Link>
             </div>
             <div id={style.secondDiv}>
                 {!loading ?

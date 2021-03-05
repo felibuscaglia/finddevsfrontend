@@ -6,6 +6,8 @@ import { connect } from 'react-redux';
 import JobCard from './JobCard';
 import Empty from '../../Media/hiring.svg';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 function HirePopUp({ color, applicantUsername, user, applicantsNotifications }) {
 
@@ -29,7 +31,7 @@ function HirePopUp({ color, applicantUsername, user, applicantsNotifications }) 
             {close => (
                 <div id={style.mainDiv}>
                     <div id={style.form}>
-                        <button id={style.closeBtn} onClick={close}><i class="fas fa-times"></i></button>
+                        <button id={style.closeBtn} onClick={close}><FontAwesomeIcon icon={faTimes} /></button>
                         {screen &&
                             <div>
                                 <h1 className='font800'>Select a project</h1>
@@ -64,7 +66,7 @@ function HirePopUp({ color, applicantUsername, user, applicantsNotifications }) 
                         }
                         {!screen && selectionUsers.find(user => user.username === applicantUsername) &&
                             <div className='displayFlexColumn' id='alignItemsCenter'>
-                                <i id={style.accepted} class="fas fa-check-circle"></i>
+                                <FontAwesomeIcon id={style.accepted} icon={faCheckCircle} />
                                 <h1 className='font800'>{applicantUsername} is already part of {selection.project.name}!</h1>
                             </div>}
                         <button disabled={!selection.project} onClick={() => setScreen(!screen)} style={{ alignSelf: 'flex-end', backgroundColor: !selection.project ? 'rgb(231,231,231)' : color, border: !selection.project ? '2px solid rgb(231,231,231)' : `2px solid ${color}` }} id={style.btn}>{screen ? 'NEXT' : 'BACK'}</button>

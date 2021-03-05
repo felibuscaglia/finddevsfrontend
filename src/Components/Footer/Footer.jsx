@@ -1,6 +1,8 @@
 import React from 'react';
 import style from './Footer.module.css';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLaptopCode, faUsers } from '@fortawesome/free-solid-svg-icons';
 
 function Footer() {
     return (
@@ -13,12 +15,12 @@ function Footer() {
             <div className='displayFlex' id={style.lastDiv}>
                 <Link className={style.links} to='/jobs'>
                     <div className={style.footerDiv}>
-                        <span><i class="fas fa-users"></i> startups jobs</span>
+                        <span><FontAwesomeIcon icon={faUsers} /> startups jobs</span>
                     </div>
                 </Link>
                 <Link className={style.links} to='/workers'>
                     <div className={style.footerDiv}>
-                        <span><i class="fas fa-laptop-code"></i> developers</span>
+                        <span><FontAwesomeIcon icon={faLaptopCode} /> developers</span>
                     </div>
                 </Link>
             </div>

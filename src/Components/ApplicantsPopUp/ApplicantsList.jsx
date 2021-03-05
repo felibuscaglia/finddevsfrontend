@@ -4,6 +4,9 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Loading from '../../Media/Loading.gif';
 import Empty from '../../Media/JobApplicants.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes, faCheckCircle, faAddressCard, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import { faGithubSquare, faLinkedin, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 
 function ApplicantsList({ job, projectName, applicants, close, setDecided, setApplicants, projectLogo }) {
 
@@ -41,7 +44,7 @@ function ApplicantsList({ job, projectName, applicants, close, setDecided, setAp
     return (
         !loading ?
             <div id={style.form}>
-                <button id={style.closeBtn} onClick={close}><i class="fas fa-times"></i></button>
+                <button id={style.closeBtn} onClick={close}><FontAwesomeIcon icon={faTimes} /></button>
                 <h1 className='font200'>{job.title}</h1>
                 <div className='displayFlex'>
                     {job.skills.map(skill =>
@@ -54,14 +57,14 @@ function ApplicantsList({ job, projectName, applicants, close, setDecided, setAp
                             <div className='displayFlex' id='alignItemsCenter'>
                                 <div id={style.profilePic}></div>
                                 <span id={style.username}>{`@ ${applicant.username}`}</span>
-                                <button style={{ color: 'green' }} onClick={() => acceptApplicant(applicant.username)} className={style.dropdownBtn}><i class="fas fa-check-circle"></i></button>
-                                <button style={{ color: 'red' }} onClick={() => rejectApplicant(applicant.username)} className={style.dropdownBtn}><i class="fas fa-times-circle"></i></button>
+                                <button style={{ color: 'green' }} onClick={() => acceptApplicant(applicant.username)} className={style.dropdownBtn}><FontAwesomeIcon icon={faCheckCircle} /></button>
+                                <button style={{ color: 'red' }} onClick={() => rejectApplicant(applicant.username)} className={style.dropdownBtn}><FontAwesomeIcon icon={faTimesCircle} /></button>
                             </div>
                             <div id={style.socialMediaDiv}>
-                                <Link to={`/user/${applicant.username}`}><i style={{ color: applicant.color }} class="fas fa-address-card"></i></Link>
-                                {applicant.gitHub && <a target='blank' rel="noreferrer" href={applicant.gitHub} style={{ textDecoration: 'none', color: applicant.color }}><i class="fab fa-github-square"></i></a>}
-                                {applicant.linkedIn && <a target='blank' rel="noreferrer" href={applicant.linkedIn} style={{ textDecoration: 'none', color: applicant.color }}><i class="fab fa-linkedin"></i></a>}
-                                {applicant.twitter && <a target='blank' rel="noreferrer" href={applicant.twitter} style={{ textDecoration: 'none', color: applicant.color }}><i class="fab fa-twitter-square"></i></a>}
+                                <Link to={`/user/${applicant.username}`}><FontAwesomeIcon style={{ color: applicant.color }} icon={faAddressCard} /></Link>
+                                {applicant.gitHub && <a target='blank' rel="noreferrer" href={applicant.gitHub} style={{ textDecoration: 'none', color: applicant.color }}><FontAwesomeIcon icon={faGithubSquare} /></a>}
+                                {applicant.linkedIn && <a target='blank' rel="noreferrer" href={applicant.linkedIn} style={{ textDecoration: 'none', color: applicant.color }}><FontAwesomeIcon icon={faLinkedin} /></a>}
+                                {applicant.twitter && <a target='blank' rel="noreferrer" href={applicant.twitter} style={{ textDecoration: 'none', color: applicant.color }}><FontAwesomeIcon icon={faTwitterSquare} /></a>}
                             </div>
                         </div>
                     )}

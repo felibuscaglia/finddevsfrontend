@@ -1,5 +1,7 @@
 import React from 'react';
 import style from './HeaderUser.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 function SearchBar () {
     function redirect (e) {
@@ -10,7 +12,7 @@ function SearchBar () {
 
     return (
         <div id={style.inputDiv}>
-            <i class="fas fa-search"></i>
+            <FontAwesomeIcon icon={faSearch} />
             <input onKeyDown={(e) => redirect (e)} id={style.input} />
         </div>
     )

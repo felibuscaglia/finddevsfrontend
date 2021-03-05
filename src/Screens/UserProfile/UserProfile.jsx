@@ -9,6 +9,9 @@ import { withStyles } from "@material-ui/core/styles";
 import ProjectCard from '../../Components/ProfileProjectCard/ProfileProjectCard';
 import Loading from '../../Media/Loading.gif';
 import EmptyUser from '../../Media/EmptyUserProfile.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
+import { faGithubSquare, faLinkedin, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 
 function UserProfile({ username, pathname }) {
 
@@ -65,9 +68,9 @@ function UserProfile({ username, pathname }) {
                     <div className='displayFlexColumn' id='alignItemsCenter'>
                         <div id={style.socialMediaDiv} style={{ color: color }}>
                             {isUser ? <Link className='link' to='/edit/user/me'><button style={{ background: color, color: user.brightness === 'bright' ? '#fff' : '#000' }} id={style.btn}>UPDATE PROFILE</button></Link> : noUser ? null : <HirePopUp applicantsNotifications={user.notifications} applicantUsername={user.username} color={color} />}
-                            {user.gitHub && <a target='_blank' rel="noreferrer" href={user.gitHub} style={{ textDecoration: 'none', color: color }}><i class="fab fa-github-square"></i></a>}
-                            {user.linkedIn && <a target='_blank' rel="noreferrer" href={user.linkedIn} style={{ textDecoration: 'none', color: color }}><i class="fab fa-linkedin"></i></a>}
-                            {user.twitter && <a target='_blank' rel="noreferrer" href={user.twitter} style={{ textDecoration: 'none', color: color }}><i class="fab fa-twitter-square"></i></a>}
+                            {user.gitHub && <a target='_blank' rel="noreferrer" href={user.gitHub} style={{ textDecoration: 'none', color: color }}><FontAwesomeIcon icon={faGithubSquare} /></a>}
+                            {user.linkedIn && <a target='_blank' rel="noreferrer" href={user.linkedIn} style={{ textDecoration: 'none', color: color }}><FontAwesomeIcon icon={faLinkedin} /></a>}
+                            {user.twitter && <a target='_blank' rel="noreferrer" href={user.twitter} style={{ textDecoration: 'none', color: color }}><FontAwesomeIcon icon={faTwitterSquare} /></a>}
                         </div>
                         <div style={{ border: `10px solid ${color}`, alignSelf: 'center', backgroundImage: `url(${user.profilePic})` }} id={style.profilePic}></div>
                         <h3 className='font800'><span style={{ color: color }}>@ </span>{user.username}</h3>
@@ -82,23 +85,23 @@ function UserProfile({ username, pathname }) {
                                     hasWorked ?
                                         <BlueOnGreenTooltip key={skill.user_skills.id} title={skill.user_skills.isValidated ? 'Already validated!' : `Validate @${username}'s skill!`}>
                                             <div style={{ background: skill.strongColor, color: skill.softColor }} id={style.skillBtn} onClick={() => validateSkill(skill)}>
-                                                <span>{hasWorked && !skill.user_skills.isValidated && <i class="fas fa-plus-circle"></i>} {skill.user_skills.isValidated ? <i class="fas fa-check-circle"></i> : null} {skill.label}</span>
+                                                <span>{hasWorked && !skill.user_skills.isValidated && <FontAwesomeIcon icon={faPlusCircle} />} {skill.user_skills.isValidated ? <FontAwesomeIcon icon={faCheckCircle} /> : null} {skill.label}</span>
                                             </div>
                                         </BlueOnGreenTooltip> :
                                         <div style={{ background: skill.strongColor, color: skill.softColor }} id={style.skillBtn} onClick={() => validateSkill(skill)}>
-                                            <span>{hasWorked && !skill.user_skills.isValidated && <i class="fas fa-plus-circle"></i>} {skill.user_skills.isValidated ? <i class="fas fa-check-circle"></i> : null} {skill.label}</span>
+                                            <span>{hasWorked && !skill.user_skills.isValidated && <FontAwesomeIcon icon={faPlusCircle} />} {skill.user_skills.isValidated ? <FontAwesomeIcon icon={faCheckCircle} /> : null} {skill.label}</span>
                                         </div>
                                 )}
                             </div>
                         </div>
                         {hasCreated.own && <div className={style.projectDiv}>
-                            <h3 className='font800'>🧑‍💻 Projects created</h3>
+                            <h3 id={style.smallerTitles} className='font800'>🧑‍💻 Projects created</h3>
                             <div id={style.mainProjectDiv}>
                                 {user.projects && user.projects.map(project => project.userXprojects.isFounder ? <ProjectCard key={project.id} isFounder={true} project={project} /> : null)}
                             </div>
                         </div>}
                         {hasCreated.joined && <div className={style.projectDiv}>
-                            <h3 className='font800'>🤝 Project joined</h3>
+                            <h3 id={style.smallerTitles} className='font800'>🤝 Project joined</h3>
                             <div id={style.mainProjectDiv}>
                                 {user.projects && user.projects.map(project => !project.userXprojects.isFounder ? <ProjectCard key={project.id} project={project} /> : null)}
                             </div>

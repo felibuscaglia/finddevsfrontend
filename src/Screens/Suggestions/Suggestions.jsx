@@ -7,6 +7,8 @@ import ProjectCard from '../../Components/UserCard/ProjectCard';
 import { findSuggestions } from '../../utils';
 import Empty from '../../Media/NotFoundSearch.svg';
 import Cover from '../../Media/searchCover.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 function Suggestions({ pathname, users, projects }) {
 
@@ -35,7 +37,7 @@ function Suggestions({ pathname, users, projects }) {
         <div>
             <div id={style.mainImage} style={{ backgroundImage: `url(${Cover})`}}>
                 <div id={style.searchDiv}>
-                    <i class="fas fa-search"></i>
+                    <FontAwesomeIcon icon={faSearch} />
                     <input onKeyDown={(e) => search(e)} placeholder='Search for projects or users' id={style.searchInput} />
                 </div>
             </div>

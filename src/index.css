@@ -28,8 +28,32 @@
   font-weight: 200;
 }
 
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.17em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 0.83em;
+}
+
+h6 {
+  font-size: .67em
+}
+
 body {
-  font-family: 'Nunito';
+  font-family: 'Nunito' !important; 
   background-color: white;
   margin: 0px;
   padding: 0px;
@@ -83,6 +107,7 @@ input {
 
 button {
   outline: none;
+  font-family: 'Nunito';
 }
 
 .fontWeight400 {
@@ -144,13 +169,12 @@ button {
 
 @media screen and (max-width: 480px) {
   #icon {
-      height: 25px;
+    height: 25px;
   }
   h1 {
     margin-bottom: 0px;
   }
 }
-
 
 #lowEnphasis {
   color: rgba(0, 0, 0, 0.6);
@@ -174,7 +198,6 @@ a {
 #popUpIcn {
   font-size: 25px;
 }
-
 
 #nunito {
   font-family: 'Nunito';
@@ -210,6 +233,7 @@ a {
   margin-top: 25px;
   margin-bottom: 10px;
 }
+
 h5 {
   padding: 0px;
   margin: 0px;
@@ -235,5 +259,5 @@ body::-webkit-scrollbar-thumb {
 }
 
 body::-webkit-scrollbar-button {
-  display:none;
+  display: none;
 }

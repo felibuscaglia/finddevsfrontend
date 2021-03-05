@@ -4,6 +4,8 @@ import Verification from '../../Media/Verification.png';
 import { Link } from 'react-router-dom';
 import { withStyles, makeStyles } from "@material-ui/core/styles";
 import Tooltip from '@material-ui/core/Tooltip';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
 const useStyles = makeStyles(theme => ({
     arrow: { color: "#181a19" }
@@ -48,7 +50,7 @@ function UserCardSearch({ user }) {
                         <span
                             style={{ background: `${skill.strongColor}`, color: skill.softColor }}
                             id={style.skillSpan}>
-                            {skill.user_skills.isValidated && <i style={{ marginRight: '5px' }} class="fas fa-check-circle"></i>}{skill.label}
+                            {skill.user_skills.isValidated && <FontAwesomeIcon style={{ marginRight: '5px' }} icon={faCheckCircle} />}{skill.label}
                         </span>
                     </div>
                 )}

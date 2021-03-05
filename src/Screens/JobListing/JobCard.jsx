@@ -9,6 +9,8 @@ import moment from 'moment';
 import { getDate } from '../../utils';
 import Verification from '../../Media/logo.png';
 import InvertedVerification from '../../Media/invertedlogo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChartLine, faThumbsUp, faUsers } from '@fortawesome/free-solid-svg-icons';
 
 const useStyles = makeStyles(theme => ({
     arrow: { color: "#181a19" }
@@ -47,9 +49,9 @@ function JobCard({ job, filterJobs, setLoading, skillSelection }) {
                     </div>
                     <span>{job.title}</span>
                     <div id={style.badgeDiv}>
-                        {job.project.upvotes > 50 && <span id={style.badge}><i class="fas fa-thumbs-up"></i> HIGHLY UPVOTED</span>}
-                        {job.project.users.length > 5 && <span id={style.badge}><i class="fas fa-chart-line"></i> GROWING FAST</span>}
-                        {job.project.users.length >=10 && <span id={style.badge}><i class="fas fa-users"></i> BIG TEAM</span>}
+                        {job.project.upvotes > 50 && <span id={style.badge}><FontAwesomeIcon icon={faThumbsUp} /> HIGHLY UPVOTED</span>}
+                        {job.project.users.length > 5 && <span id={style.badge}><FontAwesomeIcon icon={faChartLine} /> GROWING FAST</span>}
+                        {job.project.users.length >=10 && <span id={style.badge}><FontAwesomeIcon icon={faUsers} /> BIG TEAM</span>}
                     </div>
                 </div>
             </div>

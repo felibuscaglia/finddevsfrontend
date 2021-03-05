@@ -8,6 +8,8 @@ import Loading from '../../../Media/Loading.gif';
 import jwt from 'jsonwebtoken';
 import { setUserInfo } from '../../../Actions/index';
 import { connect } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDoorOpen } from '@fortawesome/free-solid-svg-icons';
 
 function JobPanel({ projectID, setUserInfo, user }) {
     const [project, setProject] = useState({});
@@ -47,7 +49,7 @@ function JobPanel({ projectID, setUserInfo, user }) {
                 <div id={style.logoDiv}>
                     <Link to={`/project/profile/${projectID}`}><img alt="Project logo" src={project.logo} id={style.invertedLogo} /></Link>
                 </div>
-                <Link id={style.link} to={`/admin/panel`}><span className='font200'><i class="fas fa-door-open"></i> Back to Admin Panel</span></Link>
+                <Link id={style.link} to={`/admin/panel`}><span className='font200'><FontAwesomeIcon icon={faDoorOpen} /> Back to Admin Panel</span></Link>
             </div>
             {project.jobOpportunities && project.jobOpportunities.length > 0 ?
                 <div id={style.secondDiv}>

@@ -12,6 +12,9 @@ import { getBrightness } from '../../utils';
 import jwt from 'jsonwebtoken';
 import { setUserInfo } from '../../Actions/index';
 import { Alert } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPortrait, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import { faGithubSquare, faLinkedin, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 
 function EditUser({ user, skills, setUserInfo }) {
 
@@ -151,7 +154,7 @@ function EditUser({ user, skills, setUserInfo }) {
                         <div id={style.firstDiv} className='displayFlex'>
                             <div id={style.imageDiv}>
                                 <div style={{ backgroundImage: `url(${preview})` }} id={style.profilePic}></div>
-                                <label for={style.fileDrop} id={style.logoLabel}><i class="fas fa-portrait"></i> Upload Image</label>
+                                <label for={style.fileDrop} id={style.logoLabel}><FontAwesomeIcon icon={faPortrait} /> Upload Image</label>
                                 <input onChange={(e) => check(e)} id={style.fileDrop} type='file' />
                                 <BlockPicker onChange={(e) => handleInputChange(e)} color={input.color} />
                             </div>
@@ -178,17 +181,17 @@ function EditUser({ user, skills, setUserInfo }) {
                         <h3 className='font800' id='giveMargin'>Social profiles</h3>
                         <div id={style.socialDiv}>
                             <div className='displayFlexColumn' id='alignItemsCenter'>
-                                <span className='font800'><i class="fab fa-github-square"></i> GitHub</span>
+                                <span className='font800'><FontAwesomeIcon icon={faGithubSquare} /> GitHub</span>
                                 <input style={{ border: errors.gitHub ? '2px solid red' : '2px solid #e7e7e7' }} value={input.gitHub} name='gitHub' onChange={(e) => handleInputChange(e)} className={style.input} />
                                 {errors.gitHub && <span className={style.errors}>Please enter a valid URL.</span>}
                             </div>
                             <div className='displayFlexColumn' id='alignItemsCenter'>
-                                <span className='font800'><i style={{ color: '#0e76a8' }} class="fab fa-linkedin"></i> LinkedIn</span>
+                                <span className='font800'><FontAwesomeIcon style={{ color: '#0e76a8' }} icon={faLinkedin} /> LinkedIn</span>
                                 <input style={{ border: errors.linkedIn ? '2px solid red' : '2px solid #e7e7e7' }} value={input.linkedIn} name='linkedIn' onChange={(e) => handleInputChange(e)} className={style.input} />
                                 {errors.linkedIn && <span className={style.errors}>Please enter a valid URL.</span>}
                             </div>
                             <div className='displayFlexColumn' id='alignItemsCenter'>
-                                <span className='font800'><i style={{ color: ' #00acee' }} class="fab fa-twitter-square"></i> Twitter</span>
+                                <span className='font800'><FontAwesomeIcon style={{ color: ' #00acee' }} icon={faTwitterSquare} /> Twitter</span>
                                 <input style={{ border: errors.twitter ? '2px solid red' : '2px solid #e7e7e7' }} value={input.twitter} name='twitter' onChange={(e) => handleInputChange(e)} className={style.input} />
                                 {errors.twitter && <span className={style.errors}>Please enter a valid URL.</span>}
                             </div>
@@ -198,7 +201,7 @@ function EditUser({ user, skills, setUserInfo }) {
                             <div id={style.skillDiv} className='displayFlex'>
                                 {selectedSkills && selectedSkills.map(skill =>
                                     <div key={skill.id}>
-                                        <button style={{ background: skill.strongColor, color: skill.softColor }} name={skill.label} onClick={(e) => removeSkill(e)} id={style.skillBtn}><i class="fas fa-times-circle"></i> {skill.label}</button>
+                                        <button style={{ background: skill.strongColor, color: skill.softColor }} name={skill.label} onClick={(e) => removeSkill(e)} id={style.skillBtn}><FontAwesomeIcon icon={faTimesCircle} /> {skill.label}</button>
                                     </div>
                                 )}
                             </div>

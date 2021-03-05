@@ -7,6 +7,7 @@ import './index.css';
 import { Provider } from "react-redux";
 import store from "./Store/index";
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.css';
 import dotenv from 'dotenv';
 dotenv.config ();
 

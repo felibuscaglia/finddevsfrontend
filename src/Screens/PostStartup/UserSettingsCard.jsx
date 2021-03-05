@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import style from './PostStartup.module.css';
 import axios from 'axios';
 import Loading from '../../Media/Loading.gif';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
 function UserSettingsCard({ user, projectID }) {
 
@@ -10,7 +12,7 @@ function UserSettingsCard({ user, projectID }) {
     function makeFounder(userId) {
         setBtnTxt (null);
         axios.post (`/users/${user.id}/${projectID}/founders`)
-            .then (res => setBtnTxt (<i class="fas fa-check-circle"></i>))
+            .then (res => setBtnTxt (<FontAwesomeIcon icon={faCheckCircle} />))
             .catch (err => setBtnTxt ('Founder'))
     }
 

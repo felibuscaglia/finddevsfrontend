@@ -8,6 +8,8 @@ import GoPremium from '../../Components/GoPremiumPopUp/GoPremium';
 import Loading from '../../Media/Loading.gif';
 import wavyImage from '../../Media/wavyBorder1.jpg';
 import Verification from '../../Media/Verification.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 function WorkersList({ users, skills, skillSelection, removeFilters, filteredWorkers, selectWorkers, userInfo }) {
 
@@ -34,7 +36,7 @@ function WorkersList({ users, skills, skillSelection, removeFilters, filteredWor
         <div className='displayFlexColumn'>
             <div id={style.mainImage} style={{ backgroundImage: `url(${wavyImage})` }}>
                 <div id={style.searchDiv}>
-                    <i class="fas fa-search"></i>
+                    <FontAwesomeIcon icon={faSearch} />
                     <Hint options={skills}>
                         <input onKeyDown={(e) => addSkill(e)} type='text' placeholder='Search and filter by skill' id={style.searchInput} />
                     </Hint>
@@ -47,7 +49,7 @@ function WorkersList({ users, skills, skillSelection, removeFilters, filteredWor
                 </div>}
             <div style={{ display: skillSelection.length > 0 ? 'flex' : 'none' }} id={style.filteredDiv}>
                 {skillSelection.map(filtered =>
-                    <div key={filtered.id} onClick={() => removeFilters(filtered)} style={{ background: filtered.strongColor, color: filtered.softColor }} id={style.skillSpan}>{filtered.label} <i class="fas fa-times-circle"></i></div>
+                    <div key={filtered.id} onClick={() => removeFilters(filtered)} style={{ background: filtered.strongColor, color: filtered.softColor }} id={style.skillSpan}>{filtered.label} <FontAwesomeIcon icon={faTimesCircle} /></div>
                 )}
             </div>
             {skillSelection.length === 0 &&

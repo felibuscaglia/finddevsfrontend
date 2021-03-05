@@ -11,6 +11,9 @@ import Confirmation from '../../Components/PopUps/Confirmation';
 import { setUserInfo } from '../../Actions/index';
 import jwt from 'jsonwebtoken';
 import { Alert } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDoorOpen, faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
+import { faProductHunt, faTwitterSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 function ProjectSettings({ user, projectID, setUserInfo }) {
 
@@ -116,7 +119,7 @@ function ProjectSettings({ user, projectID, setUserInfo }) {
                 <div id={style.logoDivS}>
                     <Link to={`/project/profile/${projectID}`}><img alt="Project logo redirect" src={input.logo} id={style.invertedLogoSettings} /></Link>
                 </div>
-                <Link id={style.link} to={`/admin/panel`}><span className='font200'><i class="fas fa-door-open"></i> Back to Admin Panel</span></Link>
+                <Link id={style.link} to={`/admin/panel`}><span className='font200'><FontAwesomeIcon icon={faDoorOpen} /> Back to Admin Panel</span></Link>
             </div>
             <div id={style.secondDiv}>
                 <h1 className='font800'>Project Settings</h1>
@@ -129,7 +132,7 @@ function ProjectSettings({ user, projectID, setUserInfo }) {
                     <div id={style.profilePicDiv}>
                         <div id={style.profilePic}><img alt="Project logo" src={preview} ID={style.logo} /></div>
                         <label for={style.fileDrop} id={style.logoLabel}>
-                            <i class="fas fa-cloud-upload-alt"></i> Upload Logo
+                            <FontAwesomeIcon icon={faCloudUploadAlt} /> Upload Logo
                         </label>
                         <input onChange={(e) => check(e)} id={style.fileDrop} type='file' />
                     </div>
@@ -151,17 +154,17 @@ function ProjectSettings({ user, projectID, setUserInfo }) {
                 </div>
                 <div id={style.socialDiv}>
                     <div className='displayFlexColumn' id='alignItemsFS'>
-                        <span className='font800'><i style={{ color: '#DA552F' }} class="fab fa-product-hunt"></i> Product Hunt</span>
+                        <span className='font800'><FontAwesomeIcon icon={faProductHunt} style={{ color: '#DA552F' }} /> Product Hunt</span>
                         <input style={{ border: inputErrors.productHunt ? '2px solid red' : '2px solid #e7e7e7' }} value={input.productHunt} maxLength='255' name='productHunt' onChange={(e) => handleInputChange(e)} className={style.socialMediaInput} />
                         {inputErrors.productHunt && <span className={style.errors}>Please enter a valid URL.</span>}
                     </div>
                     <div className='displayFlexColumn' id='alignItemsFS'>
-                        <span className='font800'><i style={{ color: ' #00acee' }} class="fab fa-twitter-square"></i> Twitter</span>
+                        <span className='font800'><FontAwesomeIcon style={{ color: ' #00acee' }} icon={faTwitterSquare} /> Twitter</span>
                         <input style={{ border: inputErrors.twitter ? '2px solid red' : '2px solid #e7e7e7' }} value={input.twitter} maxLength='255' name='twitter' onChange={(e) => handleInputChange(e)} className={style.socialMediaInput} />
                         {inputErrors.twitter && <span className={style.errors}>Please enter a valid URL.</span>}
                     </div>
                     <div className='displayFlexColumn' id='alignItemsFS'>
-                        <span className='font800'><i style={{ color: '#0e76a8' }} class="fab fa-linkedin"></i> LinkedIn</span>
+                        <span className='font800'><FontAwesomeIcon style={{ color: '#0e76a8' }} icon={faLinkedin} /> LinkedIn</span>
                         <input style={{ border: inputErrors.linkedIn ? '2px solid red' : '2px solid #e7e7e7' }} value={input.linkedIn} maxLength='255' name='linkedIn' onChange={(e) => handleInputChange(e)} className={style.socialMediaInput} />
                         {inputErrors.linkedIn && <span className={style.errors}>Please enter a valid URL.</span>}
                     </div>

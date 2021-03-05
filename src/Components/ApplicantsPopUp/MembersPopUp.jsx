@@ -7,6 +7,8 @@ import { connect } from 'react-redux';
 import ChangeRole from './ChangeRole';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { Alert } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes, faUsers, faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 function MembersPopUp({ projectID, userInfo, brightness, isFounder }) {
 
@@ -37,14 +39,14 @@ function MembersPopUp({ projectID, userInfo, brightness, isFounder }) {
     return (
         <Popup trigger={
             <div style={{ color: brightness === 'bright' ? '#fff' : '#000', border: brightness === 'bright' ? '2px solid #fff' : '2px solid #000' }} className={style.redirectDiv}>
-                <span><i class="fas fa-users"></i> Members</span>
+                <span><FontAwesomeIcon icon={faUsers} /> Members</span>
             </div>}
             modal>
             {close => (
                 <div id={style.mainDiv}>
                     {!changeRole ?
                         <div id={style.memberForm}>
-                            <button id={style.closeBtn} onClick={close}><i class="fas fa-times"></i></button>
+                            <button id={style.closeBtn} onClick={close}><FontAwesomeIcon icon={faTimes} /></button>
                             <h1 className='font200'><span className='font800'>{project.name}</span> members</h1>
                             <div id={style.topApplicantDiv}>
                                 {project.users && project.users.map(user =>
@@ -73,8 +75,8 @@ function MembersPopUp({ projectID, userInfo, brightness, isFounder }) {
                     {fire &&
                         <Alert id={style.copiedAlert} color="danger">
                             Are you sure you want to fire {fire.username}?
-                            <button className={style.actionBtn} onClick={() => fireUser(fire.id)}><i class="far fa-check-circle"></i></button>
-                            <button onClick={() => setFire(false)} className={style.actionBtn}><i class="far fa-times-circle"></i></button>
+                            <button className={style.actionBtn} onClick={() => fireUser(fire.id)}><FontAwesomeIcon icon={faCheckCircle} /></button>
+                            <button onClick={() => setFire(false)} className={style.actionBtn}><FontAwesomeIcon icon={faTimesCircle} /></button>
                         </Alert>}
                 </div>
             )}

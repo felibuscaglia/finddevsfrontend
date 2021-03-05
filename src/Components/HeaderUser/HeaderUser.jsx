@@ -9,6 +9,8 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import Register from '../PopUps/RegisterPopUp';
 import SearchBar from './SearchBar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBell, faCircle, faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 function HeaderUser(props) {
 
@@ -72,8 +74,8 @@ function HeaderUser(props) {
                     {props.userInfo.username ?
                         <div id={style.dropdownDiv}>
                             <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-                                <i id='popUpIcn' className="fas fa-bell"></i>
-                                {props.notifications && props.notifications.length > 0 && <i id={style.alert} className="fas fa-circle"></i>}
+                                <FontAwesomeIcon id='popUpIcn' icon={faBell} />
+                                {props.notifications && props.notifications.length > 0 && <FontAwesomeIcon id={style.alert} icon={faCircle} />}
                             </Button>
                             <Menu
                                 id="simple-menu"
@@ -90,10 +92,10 @@ function HeaderUser(props) {
                                             <span className='font800'>{notification.content}</span>
                                             {notification.type === 'Invitation' ?
                                                 <div>
-                                                    <button onClick={() => acceptInvitation(notification)} style={{ color: 'green' }} className={style.dropdownBtn}><i className="fas fa-check-circle"></i></button>
-                                                    <button onClick={() => rejectInvitation(notification.id, notification.userId)} style={{ color: 'red' }} className={style.dropdownBtn}><i className="fas fa-times-circle"></i></button>
+                                                    <button onClick={() => acceptInvitation(notification)} style={{ color: 'green' }} className={style.dropdownBtn}><FontAwesomeIcon icon={faCheckCircle} /></button>
+                                                    <button onClick={() => rejectInvitation(notification.id, notification.userId)} style={{ color: 'red' }} className={style.dropdownBtn}><FontAwesomeIcon icon={faTimesCircle} /></button>
                                                 </div> :
-                                                <button onClick={() => rejectInvitation(notification.id, notification.userId)} style={{ color: 'red' }} className={style.dropdownBtn}><i className="fas fa-times-circle"></i></button>
+                                                <button onClick={() => rejectInvitation(notification.id, notification.userId)} style={{ color: 'red' }} className={style.dropdownBtn}><FontAwesomeIcon icon={faTimesCircle} /></button>
                                             }
                                         </div>
                                     </MenuItem>

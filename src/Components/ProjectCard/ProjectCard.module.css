@@ -5,7 +5,7 @@
     color: white;
     padding: 25px;
     margin: 25px 0px;
-    width: 100%;
+    width: 95%;
     justify-content: space-between;
     transition: 0.3s;
 }
@@ -30,6 +30,7 @@
 #name {
     max-width: 70%;
     word-break: break-word;
+    font-size: 17px;
 }
 
 #btnDiv {
@@ -47,7 +48,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px;
+    width: 125px;
 }
 
 @media screen and (max-width: 480px) {

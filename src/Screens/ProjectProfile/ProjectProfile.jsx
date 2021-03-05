@@ -7,8 +7,11 @@ import JobCard from '../JobListing/JobCardProfile';
 import Loading from '../../Media/Loading.gif';
 import Tooltip from '@material-ui/core/Tooltip';
 import { withStyles } from "@material-ui/core/styles";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle, faRocket, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faProductHunt, faTwitterSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-function ProjectProfile({ projectID, user }) {
+function ProjectProfile({ projectID }) {
 
     const [project, setProject] = useState({});
     const [hasUpvoted, setHasUpvoted] = useState(false);
@@ -56,11 +59,11 @@ function ProjectProfile({ projectID, user }) {
             <div style={{ background: project.mainColor }} id={style.cover}></div>
             <div id={style.presentDiv}>
                 <div id={style.socialMediaDiv}>
-                    {hasUpvoted || project.isDeleted ? <button style={{ display: project.isDeleted ? 'none' : 'inline', background: project.mainColor, color: project.brightness === 'bright' ? '#fff' : '#000' }} id={style.upvoteBtn}><i class="fas fa-check-circle"></i></button> : <button onClick={modifyUpvotes} style={{ background: project.mainColor, color: project.brightness === 'bright' ? '#fff' : '#000' }} id={style.upvoteBtn}><i class="fas fa-rocket"></i> Upvote | {project.upvotes}</button>}
-                    {project.productHunt && <a href={project.productHunt} target='blank' rel="noreferrer" style={{ textDecoration: 'none', color: project.mainColor }}><i class="fab fa-product-hunt"></i></a>}
-                    {project.twitter && <a href={project.twitter} target='blank' rel="noreferrer" style={{ textDecoration: 'none', color: project.mainColor }}><i class="fab fa-twitter-square"></i></a>}
-                    {project.linkedIn && <a href={project.linkedIn} target='blank' rel="noreferrer" style={{ textDecoration: 'none', color: project.mainColor }}><i class="fab fa-linkedin"></i></a>}
-                    {project.website && <a href={project.website} target='blank' rel="noreferrer" style={{ textDecoration: 'none', color: project.mainColor }}><i class="fas fa-globe"></i></a>}
+                    {hasUpvoted || project.isDeleted ? <button style={{ display: project.isDeleted ? 'none' : 'inline', background: project.mainColor, color: project.brightness === 'bright' ? '#fff' : '#000' }} id={style.upvoteBtn}><FontAwesomeIcon icon={faCheckCircle} /></button> : <button onClick={modifyUpvotes} style={{ background: project.mainColor, color: project.brightness === 'bright' ? '#fff' : '#000' }} id={style.upvoteBtn}><FontAwesomeIcon icon={faRocket} /> Upvote | {project.upvotes}</button>}
+                    {project.productHunt && <a href={project.productHunt} target='blank' rel="noreferrer" style={{ textDecoration: 'none', color: project.mainColor }}><FontAwesomeIcon icon={faProductHunt} /></a>}
+                    {project.twitter && <a href={project.twitter} target='blank' rel="noreferrer" style={{ textDecoration: 'none', color: project.mainColor }}><FontAwesomeIcon icon={faTwitterSquare} /></a>}
+                    {project.linkedIn && <a href={project.linkedIn} target='blank' rel="noreferrer" style={{ textDecoration: 'none', color: project.mainColor }}><FontAwesomeIcon icon={faLinkedin} /></a>}
+                    {project.website && <a href={project.website} target='blank' rel="noreferrer" style={{ textDecoration: 'none', color: project.mainColor }}><FontAwesomeIcon icon={faGlobe} /></a>}
                 </div>
                 <div id={style.projectLogo}><img alt="Project logo" src={project.logo} id={style.logo} /></div>
                 <h1 id={style.projectName}>{project.name} {project.isDeleted && <BlueOnGreenTooltip title='This project has been closed by its founders.' arrow><span id={style.closedSpan}>CLOSED</span></BlueOnGreenTooltip>}</h1>

@@ -11,6 +11,8 @@ import { setUserInfo } from '../../Actions/index';
 import Loading from '../../Media/Loading.gif';
 import GoPremium from '../../Components/GoPremiumPopUp/GoPremium';
 import { Alert } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDoorOpen, faTimesCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
 function StartupAdminPanel({ user, limitOfPosts, setUserInfo }) {
     const [projects, setProjects] = useState([]);
@@ -56,7 +58,7 @@ function StartupAdminPanel({ user, limitOfPosts, setUserInfo }) {
                 <div id={style.logoDiv}>
                     <img alt="Inverted FindDevs logo" src={Logo} id={style.invertedLogo} />
                 </div>
-                <Link id={style.link} to={`/user/${user.username}`}><span className='font200'><i class="fas fa-door-open"></i> Go back</span></Link>
+                <Link id={style.link} to={`/user/${user.username}`}><span className='font200'><FontAwesomeIcon icon={faDoorOpen} /> Go back</span></Link>
             </div>
             <div id={style.secondDiv}>
                 <div id={style.projectDiv}>
@@ -70,8 +72,8 @@ function StartupAdminPanel({ user, limitOfPosts, setUserInfo }) {
                             </div>
                         </div>}
                 </div>
-                {projects.length > 0 && !limitOfPosts ? <Link to='/project/post'><span id={style.postBtn}>Post a project</span></Link> : <GoPremium isAdminPanel={true} />}
-                {alert && <Alert id={style.alert} color="danger">Are you sure you want to leave {alert.name}? <div className='displayFlex' id='alignItemsCenter' onClick={() => setAlert (false)} ><i id={style.pick} class="fas fa-times-circle"></i></div> <div onClick={ leaveProject } className='displayFlex' id='alignItemsCenter'><i id={style.pick} class="fas fa-check-circle"></i></div></Alert>}
+                {projects.length > 0 && !limitOfPosts ? null : <GoPremium isAdminPanel={true} />}
+                {alert && <Alert id={style.alert} color="danger">Are you sure you want to leave {alert.name}? <div className='displayFlex' id='alignItemsCenter' onClick={() => setAlert (false)} ><FontAwesomeIcon id={style.pick} icon={faTimesCircle} /></div> <div onClick={ leaveProject } className='displayFlex' id='alignItemsCenter'><FontAwesomeIcon id={style.pick} icon={faCheckCircle} /></div></Alert>}
             </div>
         </div>
     )

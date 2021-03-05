@@ -3,6 +3,8 @@ import style from './PopUpStyle.module.css';
 import Popup from 'reactjs-popup';
 import axios from 'axios';
 import Loading from '../../Media/Loading.gif';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 
 function Confirmation({ project }) {
 
@@ -23,7 +25,7 @@ function Confirmation({ project }) {
                         {loading ? 
                         <img alt="Loading GIF" src={Loading} /> :
                         <div>
-                            <i id={style.warning} class="fas fa-exclamation-circle"></i>
+                            <FontAwesomeIcon id={style.warning} icon={faExclamationCircle} />
                             <h2 className='font800'>Are you sure you want to delete {project.name}?</h2>
                             <span id='lowEnphasis'>Keep in mind that this is an irreversible action.</span>
                             <div id={style.btnDiv}>
