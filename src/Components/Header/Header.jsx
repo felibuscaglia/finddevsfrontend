@@ -9,7 +9,7 @@ function Header() {
     return (
         <div id={style.header}>
             <div className='displayFlex' id='alignItemsCenter'>
-                <Link to='/' className='links'><img alt="Logo" src={Logo} id='icon' /></Link>
+                <Link to='/' className='links'><img alt="Logo" src={Logo} id={style.icon} /></Link>
                 <Link to='/jobs' className='links'><span id={style.headerIcon}>be part of a startup</span></Link>
                 <Link to='/workers' className='links'><span id={style.headerIcon}>find collaborators</span></Link>
             </div>

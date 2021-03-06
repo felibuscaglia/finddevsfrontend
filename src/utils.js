@@ -8,6 +8,7 @@ export function getBrightness(bgColor) {
 }
 
 export function findSuggestions(array, searchInput) {
+  console.log (array, 'SEARCHESSSSSSSSS');
   var searchSuggestions = { projects: [], users: [] }
   for (var i = 0; i < array.length; i++) {
     if (array[i].name) {

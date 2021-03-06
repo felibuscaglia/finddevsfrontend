@@ -45,7 +45,7 @@ function StartupAdminPanel({ user, limitOfPosts, setUserInfo }) {
         setLoading (true);
         axios.delete (`/users/${user.id}/${alert.id}`)
             .then (res => window.location.reload ())
-            .catch (err => console.log (err))
+            .catch (err => setLoading (false))
     }
 
     if (loading) {

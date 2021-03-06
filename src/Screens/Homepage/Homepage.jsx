@@ -16,7 +16,7 @@ function Homepage() {
             <div className='displayFlexColumn' id='alignItemsCenter'>
                 <h1 id={style.mainTitle}>Get the boost your startup needs.</h1>
                 <RegisterPopUp isMainHomepage={true} />
-                <img alt="Startup SVG" src={mainSVG} id={style.mainSVG} />
+                <img rel="preload" as="image" alt="Startup SVG" src={mainSVG} id={style.mainSVG} />
             </div>
             <div id={style.secondDiv}>
                 <div id={style.firstHalf}>
