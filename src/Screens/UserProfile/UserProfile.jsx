@@ -34,7 +34,7 @@ function UserProfile({ username, pathname }) {
                 var userProjects = {};
                 if (res.data.projects.find(project => project.userXprojects.isFounder === true)) userProjects.own = true;
                 if (res.data.projects.find(project => project.userXprojects.isFounder === false)) userProjects.joined = true;
-                setHasCreated (userProjects);
+                setHasCreated(userProjects);
                 if (usuario && usuario.username === res.data.username) setIsUser(true);
                 if (pathname.search === "?verify" && usuario && usuario.username !== res.data.username) setHasWorked(true);
                 setLoading(false);
@@ -107,9 +107,9 @@ function UserProfile({ username, pathname }) {
                             </div>
                         </div>}
                         {user.projects.length === 0 &&
-                            <div style={{ background: color, color: user.brightness === 'bright' ? '#fff' : '#000' }} id={style.emptyDiv}>
-                                <img alt="No project to display" id={style.empty} src={EmptyUser} />
-                                <h1 id={style.emptyTitle}>{isUser ? "You haven't joined or created any project." : "This developer hasn't joined or created any project."}</h1>
+                            <div id={style.emptyDiv}>
+                                <img id={style.empty} alt="No project to display" src={EmptyUser} />
+                                <h1 id={style.emptyTitle} className='font200'>{isUser ? "You haven't joined or created any project." : "This developer hasn't joined or created any project."}</h1>
                             </div>}
                     </div>
                 </div>}

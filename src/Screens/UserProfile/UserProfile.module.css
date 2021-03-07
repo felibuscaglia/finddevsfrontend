@@ -39,31 +39,41 @@
     font-weight: 800;
     padding: 10px;
     cursor: pointer;
-  }
-  #description {
+}
+
+#description {
     font-size: 17px;
     width: 60%;
     text-align: center;
 }
 
 #empty {
-    height: 500px;
+    height: 400px;
 }
 
 #emptyDiv {
     display: flex;
     align-items: center;
-    padding: 0 7em;
+    flex-direction: column;
+    border: 1px solid rgb(231, 231, 231);
     border-radius: 10px;
-    width: 60%;
-    margin: 50px 0px;
-}
-
-#emptyTitle {
-    font-weight: 200;
+    padding: 10px;
+    width: 90%;
+    margin: 25px 0px;
 }
 
 @media screen and (max-width: 480px) {
+    #emptyTitle {
+        font-size: 25px;
+    }
+    #emptyDiv {
+        text-align: center;
+        width: 80%;
+
+    }
+    #empty {
+        height: 250px;
+    }
     #profilePic {
         margin-top: 25px;
         height: 150px;
@@ -82,21 +92,7 @@
     #cover {
         top: 50px;
     }
-    #empty {
-        height: 300px;
-    }
-    #emptyDiv {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
-    #emptyTitle {
-        font-size: 20px;
-        width: 200%;
-        margin-bottom: 10px;
-    }
 }
-
 
 #datadiv {
     display: flex;
@@ -143,9 +139,9 @@
 }
 
 #loading {
- height: 75px;
-position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    height: 75px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

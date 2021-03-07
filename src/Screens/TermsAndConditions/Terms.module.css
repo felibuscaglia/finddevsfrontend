@@ -1,0 +1,27 @@
+#mainTitle {
+    margin-bottom: 100px;
+    margin-top: 50px;
+    font-weight: 800;
+}
+
+#mainDiv {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-weight: 800;
+    margin: 50px 0px;
+    align-self: flex-start;
+}
+
+.inShort {
+    color: rgba(0, 0, 0, 0.6);
+    align-self: flex-start;
+}
+
+#li {
+    margin: 10px 0px;
+}

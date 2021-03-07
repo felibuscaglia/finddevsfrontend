@@ -54,6 +54,7 @@
 @media screen and (max-width: 480px) {
     #mainDiv {
         flex-direction: column;
+        width: 100%;
     }
     #firstDiv {
         margin-bottom: 25px;

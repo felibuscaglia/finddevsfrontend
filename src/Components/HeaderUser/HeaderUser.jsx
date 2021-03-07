@@ -68,7 +68,7 @@ function HeaderUser(props) {
     if (props.pathname.pathname.indexOf('/project/settings') === -1 && props.pathname.pathname.indexOf('/project/members') === -1 && props.pathname.pathname !== '/' && props.pathname.pathname !== '/project/post' && props.pathname.pathname !== '/admin/panel' && props.pathname.pathname.indexOf('project/jobPanel') !== 1 && props.pathname.pathname.indexOf('project/addJob') !== 1) {
         return (
             <div id={style.header}>
-                <img alt="Logo" onClick={changeScreen} style={{ cursor: 'pointer' }} src={Logo} id='icon' />
+                <img alt="Logo" onClick={changeScreen} style={{ cursor: 'pointer' }} src={Logo} id={style.logo} />
                 <div className='displayFlex' id='alignItemsCenter'>
                     {props.pathname.pathname !== '/suggestions' && <SearchBar />}
                     {props.userInfo.username ?

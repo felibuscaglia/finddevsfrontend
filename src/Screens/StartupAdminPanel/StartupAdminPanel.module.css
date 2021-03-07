@@ -36,7 +36,6 @@
     border-radius: 5px;
     font-size: 20px;
     color: white;
-    margin-top: 25px;
     transition: 0.3s;
     border: 2px solid black;
     transition: 0.3s;
@@ -44,12 +43,16 @@
 
 #empty {
     height: 400px;
-    margin-top: 100px;
 }
 
 #emptyDiv {
     display: flex;
     align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+    width: 75%;
 }
 
 #addBtn2 {
@@ -136,7 +139,7 @@
     }
     #emptyDiv {
         flex-direction: column;
-        margin-top: -25px;
+        left: 50%;
     }
     #addBtn2 {
         font-size: 15px;

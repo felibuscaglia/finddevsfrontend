@@ -72,7 +72,10 @@ function StartupAdminPanel({ user, limitOfPosts, setUserInfo }) {
                             </div>
                         </div>}
                 </div>
-                {projects.length > 0 && !limitOfPosts ? null : <GoPremium isAdminPanel={true} />}
+                {projects.length === 0 ? null : limitOfPosts ? 
+                <GoPremium isAdminPanel={true} /> : 
+                <Link to='/project/post'><button id={style.postBtn}>Post a project</button></Link>
+                }
                 {alert && <Alert id={style.alert} color="danger">Are you sure you want to leave {alert.name}? <div className='displayFlex' id='alignItemsCenter' onClick={() => setAlert (false)} ><FontAwesomeIcon id={style.pick} icon={faTimesCircle} /></div> <div onClick={ leaveProject } className='displayFlex' id='alignItemsCenter'><FontAwesomeIcon id={style.pick} icon={faCheckCircle} /></div></Alert>}
             </div>
         </div>

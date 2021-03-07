@@ -39,7 +39,15 @@
     max-height: 100px;
 }
 
+#logo {
+    height: 50px;
+}
+
 @media screen and (max-width: 480px) {
+    #logo {
+        height: 40px;
+        margin-left: 15px;
+    }
     #inputDiv {
         display: none;
     }
