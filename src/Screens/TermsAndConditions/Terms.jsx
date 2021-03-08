@@ -14,7 +14,7 @@ function Terms() {
                     please contact us at contact@finddevs.io.
                 </p>
                 <p>
-                    When you visit our website <a href="https://www.finddevs.io" target="_blank">https://www.finddevs.io</a> (the "<span className='font800'>Website</span>"), and more
+                    When you visit our website <a href="https://www.finddevs.io" target="_blank" rel="noreferrer">https://www.finddevs.io</a> (the "<span className='font800'>Website</span>"), and more
                     generally, use any of our services (the "<span className='font800'>Services</span>", which include the Website),
                     we appreciate that you are trusting us with your personal information. We take your privacy very seriously. In this privacy notice, we
                     seek to explain to you in the clearest way possible what information we

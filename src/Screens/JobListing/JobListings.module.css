@@ -70,14 +70,14 @@
 
 #btn {
     border: none;
-  border-radius: 5px;
-  font-size: 17px;
-  font-family: 'Nunito';
-  font-weight: 800;
-  padding: 10px 60px;
-  cursor: pointer;
-  background-color: transparent;
-  margin-right: 25px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-family: 'Nunito';
+    font-weight: 800;
+    padding: 10px 60px;
+    cursor: pointer;
+    background-color: transparent;
+    margin-right: 25px;
 }
 
 #skillDiv {
@@ -86,7 +86,6 @@
     flex-wrap: wrap;
     justify-content: center;
 }
-
 
 #skillSpan {
     font-size: 14px;

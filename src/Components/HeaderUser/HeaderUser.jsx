@@ -75,7 +75,7 @@ function HeaderUser(props) {
                         <div id={style.dropdownDiv}>
                             <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
                                 <FontAwesomeIcon id='popUpIcn' icon={faBell} />
-                                {props.notifications && props.notifications.length > 0 && <FontAwesomeIcon id={style.alert} icon={faCircle} />}
+                                {props.notifications && props.notifications.length > 0 && <FontAwesomeIcon style={{ display: props.notifications.length === deleted.length ? 'none' : 'flex' }}  id={style.alert} icon={faCircle} />}
                             </Button>
                             <Menu
                                 id="simple-menu"

@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.css": "./static/css/main.267d51f8.chunk.css",
-    "main.js": "./static/js/main.3228ae5c.chunk.js",
-    "main.js.map": "./static/js/main.3228ae5c.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.c903ea71.js",
-    "runtime-main.js.map": "./static/js/runtime-main.c903ea71.js.map",
-    "static/js/2.9915aaa9.chunk.js": "./static/js/2.9915aaa9.chunk.js",
-    "static/js/2.9915aaa9.chunk.js.map": "./static/js/2.9915aaa9.chunk.js.map",
-    "static/js/3.5c2984f8.chunk.js": "./static/js/3.5c2984f8.chunk.js",
-    "static/js/3.5c2984f8.chunk.js.map": "./static/js/3.5c2984f8.chunk.js.map",
+    "main.css": "./static/css/main.8c7908c3.chunk.css",
+    "main.js": "./static/js/main.e2ad3080.chunk.js",
+    "main.js.map": "./static/js/main.e2ad3080.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.af9a40d6.js",
+    "runtime-main.js.map": "./static/js/runtime-main.af9a40d6.js.map",
+    "static/css/2.658248ec.chunk.css": "./static/css/2.658248ec.chunk.css",
+    "static/js/2.b014a4fe.chunk.js": "./static/js/2.b014a4fe.chunk.js",
+    "static/js/2.b014a4fe.chunk.js.map": "./static/js/2.b014a4fe.chunk.js.map",
+    "static/js/3.f00890e8.chunk.js": "./static/js/3.f00890e8.chunk.js",
+    "static/js/3.f00890e8.chunk.js.map": "./static/js/3.f00890e8.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.267d51f8.chunk.css.map": "./static/css/main.267d51f8.chunk.css.map",
-    "static/js/2.9915aaa9.chunk.js.LICENSE.txt": "./static/js/2.9915aaa9.chunk.js.LICENSE.txt",
-    "static/media/EmptyUserProfile.7e24d68a.svg": "./static/media/EmptyUserProfile.7e24d68a.svg",
+    "static/css/2.658248ec.chunk.css.map": "./static/css/2.658248ec.chunk.css.map",
+    "static/css/main.8c7908c3.chunk.css.map": "./static/css/main.8c7908c3.chunk.css.map",
+    "static/js/2.b014a4fe.chunk.js.LICENSE.txt": "./static/js/2.b014a4fe.chunk.js.LICENSE.txt",
+    "static/media/EmptyUserProfile.8df83d09.svg": "./static/media/EmptyUserProfile.8df83d09.svg",
     "static/media/FirstSVG.5c36163e.svg": "./static/media/FirstSVG.5c36163e.svg",
     "static/media/JobApplicants.1bcd1d96.svg": "./static/media/JobApplicants.1bcd1d96.svg",
     "static/media/Launching.7ef51cd1.svg": "./static/media/Launching.7ef51cd1.svg",
     "static/media/Loading.626e0c2b.gif": "./static/media/Loading.626e0c2b.gif",
     "static/media/NotFoundSearch.4892eeff.svg": "./static/media/NotFoundSearch.4892eeff.svg",
+    "static/media/index.css": "./static/media/Nunito-SemiBold.b25fd4bc.woff",
     "static/media/PairProgramming.ee838f7e.svg": "./static/media/PairProgramming.ee838f7e.svg",
     "static/media/Success.a207a2ff.svg": "./static/media/Success.a207a2ff.svg",
     "static/media/Verification.e133bdb7.png": "./static/media/Verification.e133bdb7.png",
@@ -30,9 +33,10 @@
     "static/media/wavyBorder1.5c7a4b7f.jpg": "./static/media/wavyBorder1.5c7a4b7f.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c903ea71.js",
-    "static/js/2.9915aaa9.chunk.js",
-    "static/css/main.267d51f8.chunk.css",
-    "static/js/main.3228ae5c.chunk.js"
+    "static/js/runtime-main.af9a40d6.js",
+    "static/css/2.658248ec.chunk.css",
+    "static/js/2.b014a4fe.chunk.js",
+    "static/css/main.8c7908c3.chunk.css",
+    "static/js/main.e2ad3080.chunk.js"
   ]
 }

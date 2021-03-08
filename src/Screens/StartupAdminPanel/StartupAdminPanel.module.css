@@ -39,6 +39,7 @@
     transition: 0.3s;
     border: 2px solid black;
     transition: 0.3s;
+    margin-bottom: 50px;
 }
 
 #empty {

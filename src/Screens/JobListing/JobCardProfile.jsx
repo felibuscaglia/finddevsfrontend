@@ -30,7 +30,7 @@ function JobCardProfile({ job, project, isJobPanel }) {
             </div>
             {!isJobPanel ? 
             <div id={style.applyDiv}>
-                <Link to={`/job/info/${job.id}`}><button id={style.btn}>Apply</button></Link>
+                <Link to={`/job/info/${job.id}`}><button style={{ color: project.brightness === 'bright' ? '#fff' : '#000', border: project.brightness === 'bright' ? '4px solid #fff' : '4px solid #000'}} id={style.btn}>Apply</button></Link>
                 <span id={style.pinned}>📌{getDate(moment(job.createdAt).format('MM/DD/YYYY'))}</span>
             </div> :
                 <div id={style.applicantsDiv}>
