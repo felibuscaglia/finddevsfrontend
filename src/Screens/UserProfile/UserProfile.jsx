@@ -8,10 +8,11 @@ import Tooltip from '@material-ui/core/Tooltip';
 import { withStyles } from "@material-ui/core/styles";
 import ProjectCard from '../../Components/ProfileProjectCard/ProfileProjectCard';
 import Loading from '../../Media/Loading.gif';
-import EmptyUser from '../../Media/EmptyUserProfile.svg';
+import Logo from '../../Media/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 import { faGithubSquare, faLinkedin, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+import Verification from '../../Media/Verification.png';
 
 function UserProfile({ username, pathname }) {
 
@@ -73,7 +74,10 @@ function UserProfile({ username, pathname }) {
                             {user.twitter && <a target='_blank' rel="noreferrer" href={user.twitter} style={{ textDecoration: 'none', color: color }}><FontAwesomeIcon icon={faTwitterSquare} /></a>}
                         </div>
                         <div style={{ border: `10px solid ${color}`, alignSelf: 'center', backgroundImage: `url(${user.profilePic})` }} id={style.profilePic}></div>
-                        <h3 className='font800'><span style={{ color: color }}>@ </span>{user.username}</h3>
+                        <div className='displayFlex' id="alignItemsCenter">
+                            <h3 className='font800'><span style={{ color: color }}>@ </span>{user.username}</h3>
+                            {user.isPremium ? <img src={Verification} id={style.verification} /> : null}
+                        </div>
                         <span id={style.description}>{user.description}</span>
                         <div id={style.datadiv}>
                             {user.region && user.country ?
@@ -95,21 +99,21 @@ function UserProfile({ username, pathname }) {
                             </div>
                         </div>
                         {hasCreated.own && <div className={style.projectDiv}>
-                            <h3 id={style.smallerTitles} className='font800'>🧑‍💻 Projects created</h3>
+                            <h3 id={style.smallerTitles} className='font800'>Projects created</h3>
                             <div id={style.mainProjectDiv}>
                                 {user.projects && user.projects.map(project => project.userXprojects.isFounder ? <ProjectCard key={project.id} isFounder={true} project={project} /> : null)}
                             </div>
                         </div>}
                         {hasCreated.joined && <div className={style.projectDiv}>
-                            <h3 id={style.smallerTitles} className='font800'>🤝 Project joined</h3>
+                            <h3 id={style.smallerTitles} className='font800'>Project joined</h3>
                             <div id={style.mainProjectDiv}>
                                 {user.projects && user.projects.map(project => !project.userXprojects.isFounder ? <ProjectCard key={project.id} project={project} /> : null)}
                             </div>
                         </div>}
                         {user.projects.length === 0 &&
                             <div id={style.emptyDiv}>
-                                <img id={style.empty} alt="No project to display" src={EmptyUser} />
-                                <h1 id={style.emptyTitle} className='font200'>{isUser ? "You haven't joined or created any project." : "This developer hasn't joined or created any project."}</h1>
+                                <img src={Logo} id={style.empty} />
+                                <h3 className='font200'>{isUser ? "You haven't joined or created any project." : "This developer hasn't joined or created any project."}</h3>
                             </div>}
                     </div>
                 </div>}

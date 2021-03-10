@@ -45,7 +45,7 @@ function UserCard({ user, setLoading, selectWorkers, skillSelection }) {
     }
 
     return (
-        <div id={style.userCard}>
+        <div id={style.userCard} style={{ height: user.skills ? '650px' : '525px'}}>
             <div className='displayFlexColumn' id='alignItemsCenter'>
                 <img alt="Profile" id={style.profilePic} src={user.profilePic} />
                 <div id='alignItemsCenter' className='displayFlex'>

@@ -15,6 +15,11 @@ function SuccessPage({ userInfo }) {
                         You are now a verified FindDevs member, which means you are one step closer to creating the next big thing.
                         Now all that's left is to get to work! The limit now is up to you. Start transforming your ideas into reality.
                     </p>
+                    <br />
+                    <p id={style.thankYou}>
+                    If any type of problem arises regarding the acquisition and subsequent use of the FindDevs membership, do not hesitate to contact us at
+                    <span className="mainColor"> contact@finddevs.io</span>.
+                    </p>
                     <span className='lowEnphasis'></span>
                     <Link to={`/user/${userInfo.username}`}><button id={style.btn}>Go back to your profile</button></Link>
                 </div>

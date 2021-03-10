@@ -33,7 +33,7 @@
 
 #form2 {
     background-color: white;
-    width: 90%;
+    width: 1000px;
     text-align: center;
     border-radius: 10px;
     display: flex;
@@ -63,13 +63,11 @@
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    background-image: url(https://media-exp1.licdn.com/dms/image/C4E03AQETVV4DqrbYkQ/profile-displayphoto-shrink_400_400/0/1610996414116?e=1617235200&v=beta&t=wbPiJXt8Nbyz4H9ZmAoCrP5bA3GsAtRdmyhEJXSKzKo);
     background-size: cover;
     margin-right: 15px;
 }
 
 #applicantDiv {
-    border-bottom: 2px solid rgb(231, 231, 231);
     font-size: 17px;
     width: 100%;
     padding: 25px;
@@ -77,6 +75,14 @@
     justify-content: space-between;
     align-items: center;
     margin: 25px 0px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+#applicantDiv:hover {
+    -webkit-box-shadow: 0px 0px 32px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 32px -9px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 32px -9px rgba(0,0,0,0.75);
 }
 
 #socialMediaDiv {
@@ -89,7 +95,6 @@
 
 #socialMediaDiv2 {
     font-size: 25px;
-    width: 65%;
     align-items: center;
 }
 
@@ -112,8 +117,13 @@
     padding: 10px;
     transition: 0.3s;
     cursor: pointer;
-    width: 125px;
+    width: 140px;
     text-align: center;
+}
+
+#userInfo {
+    display: flex;
+    align-items: center;
 }
 
 #empty {
@@ -174,6 +184,9 @@
 }
 
 @media screen and (max-width: 480px) {
+    #acceptedName {
+        font-size: 20px;
+    }
     #memberInfo {
         margin-left: 0px;
     }
@@ -198,6 +211,7 @@
     }
     #applicantDiv {
         flex-direction: column;
+        align-items: flex-start;
     }
     #accepted {
         margin-right: 0px;

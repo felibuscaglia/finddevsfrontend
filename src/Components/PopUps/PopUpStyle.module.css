@@ -117,11 +117,23 @@
     margin-right: 25px;
 }
 
+#nonHomepage {
+    color: white;
+    background: black;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 480px) {
     #delete {
         width: 45%;
         font-size: 15px;
         margin-left: 0px;
+    }
+    #nonHomepage {
+        padding: 10px;
     }
 }
 
@@ -172,15 +184,6 @@
     flex-direction: column;
     align-items: center;
     padding: 50px;
-}
-
-#nonHomepage {
-    color: white;
-    background: black;
-    padding: 15px;
-    border-radius: 5px;
-    font-weight: 700;
-    cursor: pointer;
 }
 
 #title {
@@ -275,4 +278,16 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 15px;
+}
+
+#agreement {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 13px;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+#link {
+    color: #23F0C7;
+    text-decoration: none;
 }

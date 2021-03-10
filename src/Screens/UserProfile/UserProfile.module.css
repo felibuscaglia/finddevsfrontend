@@ -4,6 +4,7 @@
     border-radius: 50%;
     background-size: cover;
     margin-top: 25px;
+    margin-bottom: 10px;
 }
 
 #smallerTitles {
@@ -16,6 +17,12 @@
     position: absolute;
     top: 96px;
     z-index: -10;
+}
+
+#verification {
+    height: 25px;
+    margin-left: 5px;
+    margin-bottom: 10px;
 }
 
 #socialMediaDiv {
@@ -47,33 +54,20 @@
     text-align: center;
 }
 
-#empty {
-    height: 400px;
-}
-
 #emptyDiv {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    border: 1px solid rgb(231, 231, 231);
-    border-radius: 10px;
-    padding: 10px;
-    width: 90%;
-    margin: 25px 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+#empty {
+    height: 100px;
+    filter: grayscale(1);
+    margin: 50px 0px;
 }
 
 @media screen and (max-width: 480px) {
-    #emptyTitle {
-        font-size: 25px;
-    }
-    #emptyDiv {
-        text-align: center;
-        width: 80%;
-
-    }
-    #empty {
-        height: 250px;
-    }
     #profilePic {
         margin-top: 25px;
         height: 150px;
@@ -106,7 +100,7 @@
 #skillBtn {
     font-size: 17px;
     color: white;
-    font-weight: 200;
+    font-weight: 600;
     padding: 5px;
     border-radius: 4px;
     cursor: pointer;

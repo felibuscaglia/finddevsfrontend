@@ -21,7 +21,7 @@ import EditUser from './Screens/EditUser/EditUser';
 import Suggestions from './Screens/Suggestions/Suggestions';
 import NotFound from './Screens/NotFound/NotFound';
 import SuccessPage from './Screens/SuccessPage/SuccessPage';
-import TermsAndConditions from './Screens/TermsAndConditions/Terms';
+import TermsAndConditions from './Screens/TermsAndConditions/Privacy';
 
 function App({ setGlobalSkills, setUserInfo, setProjects, getUsers, getNotifications, getJobs }) {
 
@@ -56,7 +56,7 @@ function App({ setGlobalSkills, setUserInfo, setProjects, getUsers, getNotificat
                 <Route exact path='/workers' component={WorkersList} />
                 <Route exact path='/suggestions' render={({ location }) => <Suggestions pathname={location} />} />
                 <Route exact path='/success' component={SuccessPage} />
-                <Route exact path='/terms' component={TermsAndConditions} />
+                <Route exact path='/privacy' component={TermsAndConditions} />
                 <NotFound />
             </Switch>
             <Route exact path='/' component={Footer} />

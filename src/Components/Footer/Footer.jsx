@@ -15,12 +15,12 @@ function Footer() {
             <div className='displayFlex' id={style.lastDiv}>
                 <Link className={style.links} to='/jobs'>
                     <div className={style.footerDiv}>
-                        <span><FontAwesomeIcon icon={faUsers} /> startups jobs</span>
+                        <span><FontAwesomeIcon icon={faUsers} /> Startups jobs</span>
                     </div>
                 </Link>
                 <Link className={style.links} to='/workers'>
                     <div className={style.footerDiv}>
-                        <span><FontAwesomeIcon icon={faLaptopCode} /> developers</span>
+                        <span><FontAwesomeIcon icon={faLaptopCode} /> Developers</span>
                     </div>
                 </Link>
             </div>

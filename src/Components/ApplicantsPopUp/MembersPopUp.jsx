@@ -52,8 +52,8 @@ function MembersPopUp({ projectID, userInfo, brightness, isFounder }) {
                                 {project.users && project.users.map(user =>
                                     user.userXprojects.endDate === null &&
                                     <div key={user.id} id={style.applicantDiv}>
-                                        <div className='displayFlex' id='alignItemsCenter'>
-                                            <div id={style.profilePic}></div>
+                                        <div id={style.userInfo}>
+                                            <div style={{ backgroundImage: `url(${user.profilePic})`}} id={style.profilePic}></div>
                                             <div id={style.memberInfo}>
                                                 <span className='font800'>{`@ ${user.username}`}</span>
                                                 <span className='font200'>{user.userXprojects.role}</span>

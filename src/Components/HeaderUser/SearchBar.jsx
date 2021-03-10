@@ -13,7 +13,7 @@ function SearchBar () {
     return (
         <div id={style.inputDiv}>
             <FontAwesomeIcon icon={faSearch} />
-            <input onKeyDown={(e) => redirect (e)} id={style.input} />
+            <input onKeyDown={(e) => redirect (e)} id={style.input} placeholder="Search for startups and users" />
         </div>
     )
 }

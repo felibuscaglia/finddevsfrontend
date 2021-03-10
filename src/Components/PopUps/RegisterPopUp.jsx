@@ -3,6 +3,7 @@ import style from './PopUpStyle.module.css';
 import Popup from 'reactjs-popup';
 import axios from 'axios';
 import randomColor from 'randomcolor';
+import { Link } from 'react-router-dom';
 import { getBrightness } from '../../utils';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -62,7 +63,7 @@ function RegisterPopUp({ isHomepage, isMain, isMainHomepage, isJobProfile }) {
             isMain ? <button className={style.btn}>Post your startup.</button> :
                 isMainHomepage ? <button id={style.joinBtn}>Join FindDevs for free.</button> :
                     isHomepage ?
-                        <span className={style.headerIcon}>join</span> :
+                        <span className={style.headerIcon}>Join</span> :
                         <span id={style.nonHomepage}>Join FindDevs</span>
         } modal>
             {close => (
@@ -86,6 +87,7 @@ function RegisterPopUp({ isHomepage, isMain, isMainHomepage, isJobProfile }) {
                             </div>
                             {errors['password'] && <span id={style.alertSpan}>{errors['password']}</span>}
                             <button disabled={!input.username || !input.password || !input.email || disabled ? true : false} id={style.createBtn} onClick={() => handleSubmit()} >Create your account.</button>
+                            <span id={style.agreement}>By signing up, I agree to FindDevs <Link id={style.link} to="/privacy">Privacy Policy</Link></span>
                         </div>
                     </div>
                 </div>

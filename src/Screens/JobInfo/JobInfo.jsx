@@ -53,13 +53,13 @@ function JobInfo({ jobID, user, setUserInfo }) {
                 <div>
                     {job.project &&
                         <div style={{ background: job.project && job.project.mainColor, color: job.project.brightness === 'bright' ? '#fff' : '#000' }} id={style.mainDiv}>
-                            <Link style={{ color: job.project.brightness === 'bright' ? '#fff' : '#000' }} to='/jobs'><span id={style.goBack}><FontAwesomeIcon style={{ marginRight: '10px' }} icon={faArrowLeft} />More jobs</span></Link>
+                            <Link style={{ color: job.project.brightness === 'bright' ? '#fff' : '#000', textDecoration: 'none' }} to='/jobs'><span id={style.goBack}><FontAwesomeIcon style={{ marginRight: '10px' }} icon={faArrowLeft} />More jobs</span></Link>
                             <Link className='links' to={`/project/profile/${job.project.id}`}>
                                 <div className='displayFlex' id='alignItemsCenter'>
                                     <div id={style.projectLogoDiv}>
                                         <img alt="Project logo" src={job.project.logo} id={style.logo} />
                                     </div>
-                                    <h5 style={{ color: job.project.brightness === 'bright' ? '#fff' : '#000' }} className='font800'>{job.project.name}</h5>
+                                    <h5 style={{ color: job.project.brightness === 'bright' ? '#fff' : '#000', margin: '0px' }} className='font800'>{job.project.name}</h5>
                                 </div>
                             </Link>
                             <h1 id={style.jobTitle}>{job.title}</h1>

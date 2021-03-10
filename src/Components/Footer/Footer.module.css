@@ -20,7 +20,7 @@
 
 .links {
     color: white;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 @media screen and (max-width: 480px) {

@@ -48,12 +48,14 @@
 #infoDiv {
     display: flex;
     flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
 }
 
 #form {
     background-color: #181818;
     width: 60%;
-    height: 100%;
+    height: 750px;
     text-align: center;
     border-radius: 10px;
     display: flex;
@@ -137,7 +139,16 @@
     border-radius: 5px;
 }
 
+#titleGP {
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
 @media screen and (max-width: 480px) {
+    #titleGP {
+        font-size: 25px;
+        margin-bottom: 0px;
+    }
     #alreadyMember {
         font-size: 12px;
         margin-top: 10px;
@@ -214,11 +225,6 @@
 
 .pro {
     margin: 10px 0px;
-}
-
-#titleGP {
-    font-weight: 800;
-    margin-bottom: 20px;
 }
 
 #alreadyMember:hover {

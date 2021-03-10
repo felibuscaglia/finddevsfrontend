@@ -13,7 +13,7 @@ function Accepted({ decided, projectName, type }) {
                 </div> :
                 <div className={style.acceptedDiv}>
                     <FontAwesomeIcon id={style.accepted} icon={faCheckCircle} />
-                    <h1>{decided} is now part of {projectName}!</h1>
+                    <h1 id={style.acceptedName}>{decided} is now part of {projectName}!</h1>
                 </div>
             }
         </div>

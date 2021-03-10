@@ -68,14 +68,20 @@ function HeaderUser(props) {
     if (props.pathname.pathname.indexOf('/project/settings') === -1 && props.pathname.pathname.indexOf('/project/members') === -1 && props.pathname.pathname !== '/' && props.pathname.pathname !== '/project/post' && props.pathname.pathname !== '/admin/panel' && props.pathname.pathname.indexOf('project/jobPanel') !== 1 && props.pathname.pathname.indexOf('project/addJob') !== 1) {
         return (
             <div id={style.header}>
-                <img alt="Logo" onClick={changeScreen} style={{ cursor: 'pointer' }} src={Logo} id={style.logo} />
+                <div className="displayFlex" id="alignItemsCenter">
+                    <img alt="Logo" onClick={changeScreen} src={Logo} id={style.logo} />
+                    <div className="displayFlex">
+                        <Link to='/jobs' className='links'><span id={style.headerIcon}>Be part of a startup</span></Link>
+                        <Link to='/workers' className='links'><span id={style.headerIcon}>Find collaborators</span></Link>
+                    </div>
+                </div>
                 <div className='displayFlex' id='alignItemsCenter'>
                     {props.pathname.pathname !== '/suggestions' && <SearchBar />}
                     {props.userInfo.username ?
                         <div id={style.dropdownDiv}>
                             <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
                                 <FontAwesomeIcon id='popUpIcn' icon={faBell} />
-                                {props.notifications && props.notifications.length > 0 && <FontAwesomeIcon style={{ display: props.notifications.length === deleted.length ? 'none' : 'flex' }}  id={style.alert} icon={faCircle} />}
+                                {props.notifications && props.notifications.length > 0 && <FontAwesomeIcon style={{ display: props.notifications.length === deleted.length ? 'none' : 'flex' }} id={style.alert} icon={faCircle} />}
                             </Button>
                             <Menu
                                 id="simple-menu"
@@ -129,21 +135,6 @@ function HeaderUser(props) {
                                         <MenuItem>
                                             <div className={style.dropdown}>
                                                 <span>Your startups</span>
-                                            </div>
-                                        </MenuItem>
-                                    </Link>
-                                    <hr id='line'></hr>
-                                    <Link to='/jobs' className='links'>
-                                        <MenuItem onClick={handleClose2}>
-                                            <div className={style.dropdown}>
-                                                <span>Startup jobs</span>
-                                            </div>
-                                        </MenuItem>
-                                    </Link>
-                                    <Link className='links' to='/workers'>
-                                        <MenuItem onClick={handleClose2}>
-                                            <div className={style.dropdown}>
-                                                <span>Workers</span>
                                             </div>
                                         </MenuItem>
                                     </Link>

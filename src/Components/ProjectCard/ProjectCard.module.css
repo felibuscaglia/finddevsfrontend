@@ -31,6 +31,7 @@
     max-width: 70%;
     word-break: break-word;
     font-size: 17px;
+    margin: 0px;
 }
 
 #btnDiv {
@@ -48,7 +49,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 125px;
+    width: 140px;
 }
 
 @media screen and (max-width: 480px) {

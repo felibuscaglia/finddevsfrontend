@@ -136,9 +136,6 @@ function EditUser({ user, skills, setUserInfo }) {
         <div className='displayFlexColumn' id='alignItemsCenter'>
             <div style={{ background: user.color }} id={style.mainImage}>
                 <h1 style={{ color: user.brightness === 'bright' ? '#fff' : '#000' }} className='font800'>Edit your profile</h1>
-                <svg id={style.cover} style={{ position: 'absolute', top: 160 }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                    <path fill="#f9f9f9" fill-opacity="1" d="M0,192L60,192C120,192,240,192,360,202.7C480,213,600,235,720,224C840,213,960,171,1080,160C1200,149,1320,171,1380,181.3L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
-                </svg>
             </div>
             <div id={style.container}>
                 {!loading && <div id={style.form}>

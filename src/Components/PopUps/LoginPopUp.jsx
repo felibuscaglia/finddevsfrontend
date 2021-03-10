@@ -39,7 +39,7 @@ function LoginPopUp({ isRegister }) {
     }
 
     return (
-        <Popup trigger={isRegister ? <span className='mainColor'>Log in</span> : <span className={style.headerIcon}>login</span>} modal>
+        <Popup trigger={isRegister ? <span className='mainColor'>Log in</span> : <span className={style.headerIcon}>Login</span>} modal>
             {close => (
                 <div id={style.mainDiv}>
                     <div id={style.form}>

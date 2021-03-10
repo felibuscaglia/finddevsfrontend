@@ -36,9 +36,9 @@ function JobListings({ jobs, skills, skillSelection, filteredJobs, filterJob, re
                     </Hint>
                 </div>
             </div>
-            <div style={{ display: skillSelection.length > 0 ? 'block' : 'none' }} id={style.filteredDiv}>
+            <div style={{ display: skillSelection.length > 0 ? 'flex' : 'none' }} id={style.filteredDiv}>
                 {skillSelection.map(filtered =>
-                    <span key={filtered.id} onClick={() => removeJobFilter(filtered)} style={{ background: filtered.strongColor, color: filtered.softColor }} id={style.skillSpan}>{filtered.label} <FontAwesomeIcon icon={faTimesCircle} /></span>
+                    <div key={filtered.id} onClick={() => removeJobFilter(filtered)} style={{ background: filtered.strongColor, color: filtered.softColor }} id={style.skillSpan}>{filtered.label} <FontAwesomeIcon icon={faTimesCircle} /></div>
                 )}
             </div>
             {loading ?

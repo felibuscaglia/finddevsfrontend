@@ -6,6 +6,12 @@
     background: white;
 }
 
+#headerIcon {
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0px 50px;
+    cursor: pointer;
+}
 
 #inputDiv {
     background: whitesmoke;
@@ -41,12 +47,15 @@
 
 #logo {
     height: 50px;
+    width: 38px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 480px) {
     #logo {
+        width: 30px;
         height: 40px;
-        margin-left: 15px;
+        margin-left: 0px;
     }
     #inputDiv {
         display: none;
@@ -60,6 +69,10 @@
     }
     #dropdownDiv {
         justify-content: space-between;
+    }
+    #headerIcon {
+        font-size: 10px;
+        margin: 0px 8px;
     }
 }
   
@@ -130,4 +143,10 @@
     border: none;
     font-family: 'Nunito';
     margin-left: 10px;
+    width: 100%;
+}
+
+#input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-style: italic;
 }
