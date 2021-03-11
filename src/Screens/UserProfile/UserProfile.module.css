@@ -68,6 +68,14 @@
 }
 
 @media screen and (max-width: 480px) {
+    #emptyTitle {
+        font-size: 20px;
+        width: 75%;
+        text-align: center;
+    }
+    #empty {
+        height: 75px;
+    }
     #profilePic {
         margin-top: 25px;
         height: 150px;

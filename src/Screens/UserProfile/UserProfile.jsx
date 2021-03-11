@@ -113,7 +113,7 @@ function UserProfile({ username, pathname }) {
                         {user.projects.length === 0 &&
                             <div id={style.emptyDiv}>
                                 <img src={Logo} id={style.empty} />
-                                <h3 className='font200'>{isUser ? "You haven't joined or created any project." : "This developer hasn't joined or created any project."}</h3>
+                                <h3 id={style.emptyTitle} className='font200'>{isUser ? "You haven't joined or created any project." : "This developer hasn't joined or created any project."}</h3>
                             </div>}
                     </div>
                 </div>}

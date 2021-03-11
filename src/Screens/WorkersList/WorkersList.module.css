@@ -6,6 +6,8 @@
     background-size: cover;
     justify-content: center;
     align-items: center;
+    justify-content: center;
+    margin-bottom: -25px;
 }
 
 #searchDiv {
@@ -13,10 +15,10 @@
     padding: 15px;
     font-size: 20px;
     border-radius: 35px;
-    margin-bottom: 125px;
     display: flex;
     align-items: center;
     z-index: 100;
+    margin-bottom: 175px;
 }
 
 #searchInput {
@@ -27,7 +29,7 @@
     font-family: 'Nunito';
     font-size: 20px;
     font-weight: 600;
-    z-index: 11;
+    z-index: 10;
 }
 
 #userCards {
