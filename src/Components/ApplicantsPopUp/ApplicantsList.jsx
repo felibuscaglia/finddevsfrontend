@@ -55,7 +55,7 @@ function ApplicantsList({ job, projectName, applicants, close, setDecided, setAp
                     {applicants.map(applicant =>
                         <div key={applicant.id} id={style.applicantDiv}>
                             <div className='displayFlex' id='alignItemsCenter'>
-                                <div id={style.profilePic}></div>
+                                <div id={style.profilePic} style={{ backgroundImage: `url(${applicant.profilePic})`}} ></div>
                                 <span id={style.username}>{`@ ${applicant.username}`}</span>
                                 <button style={{ color: 'green' }} onClick={() => acceptApplicant(applicant.username)} className={style.dropdownBtn}><FontAwesomeIcon icon={faCheckCircle} /></button>
                                 <button style={{ color: 'red' }} onClick={() => rejectApplicant(applicant.username)} className={style.dropdownBtn}><FontAwesomeIcon icon={faTimesCircle} /></button>
